@@ -18,9 +18,7 @@
         "paths": {
             "@/assets/*": ["./src/assets/*"],
             "@/config/*": ["./src/config/*"],
-            "@/modules/*": ["./src/modules/*"],
-            "@/shared/*": ["./src/shared/*"],
-            "@api/*": ["./src/modules/api/presentation/*"]
+            "@/shared/*": ["./src/shared/*"]
         },
 
         "typeRoots" : [
