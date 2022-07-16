@@ -1,4 +1,7 @@
 const nextJest = require('next/jest');
+const { pathsToModuleNameMapper } = require('ts-jest');
+
+const { compilerOptions } = require('./tsconfig.json');
 
 const createJestConfig = nextJest({
     dir: './',
@@ -6,11 +9,9 @@ const createJestConfig = nextJest({
 
 const customJestConfig = {
     setupFilesAfterEnv: ['<rootDir>/src/jest.setup.js'],
-    moduleNameMapper: {
-        '^@/assets/(.*)$': '<rootDir>/assets/$1',
-        '^@/config/(.*)$': '<rootDir>/config/$1',
-        '^@/shared/(.*)$': '<rootDir>/shared/$1',
-    },
+    moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {
+        prefix: '<rootDir>',
+    }),
     testEnvironment: 'jest-environment-jsdom',
 };
 

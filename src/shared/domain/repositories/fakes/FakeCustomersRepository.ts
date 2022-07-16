@@ -34,7 +34,7 @@ export class FakeCustomersRepository implements ICustomersRepository {
 
     public async create(customer: Omit<ICustomer, 'id'>): Promise<ICustomer> {
         const newCustomer: ICustomer = {
-            id: faker.random.uuid(),
+            id: faker.datatype.uuid(),
             ...customer,
         };
 

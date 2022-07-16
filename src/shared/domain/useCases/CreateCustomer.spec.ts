@@ -31,6 +31,9 @@ describe('CreateCustomer', () => {
     it('should throw if an error occurs', async () => {
         const repository = new FakeCustomersRepository();
         const createCustomerUseCase = new CreateCustomer(repository);
+        repository.create = jest.fn(() => {
+            throw new Error('An error occurred');
+        });
 
         const customer: ICreateCustomerDTO = {
             name: `${faker.name.firstName()} ${faker.name.lastName()}`,
@@ -39,6 +42,8 @@ describe('CreateCustomer', () => {
             installmentLimit: faker.datatype.number(),
         };
 
-        expect(await createCustomerUseCase.execute(customer)).rejects.toThrow();
+        expect(createCustomerUseCase.execute(customer)).rejects.toThrow(
+            'An error occurred',
+        );
     });
 });
