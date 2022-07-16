@@ -46,8 +46,6 @@ export class FakeCustomersRepository implements ICustomersRepository {
             findCustomer => findCustomer.id === customer.id,
         );
 
-        if (findIndex === -1) throw new Error('Customer not found');
-
         this.customers[findIndex] = customer;
 
         return customer;

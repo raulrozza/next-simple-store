@@ -41,8 +41,6 @@ export class FakeProductsRepository {
             findProduct => findProduct.id === product.id,
         );
 
-        if (findIndex === -1) throw new Error('Product not found');
-
         this.products[findIndex] = product;
 
         return product;
