@@ -12,8 +12,6 @@ export class FakeCustomersRepository implements ICustomersRepository {
     public async getAll(
         params: ICustomerQueryParams = {},
     ): Promise<ICustomer[]> {
-        if (!params) return this.customers;
-
         return this.customers.filter(customer => {
             let matchesParams = true;
 
