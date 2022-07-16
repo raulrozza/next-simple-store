@@ -1,7 +1,6 @@
-export interface IProduct {
-    id: string;
+export type ICreateProductDTO = {
     slug: string;
     name: string;
     description: string;
     price: number;
-}
+};
