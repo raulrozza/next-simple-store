@@ -7,5 +7,4 @@ export type ICreateOrderDTO = {
     customerId: string;
     products: ICreateProductOrderDTO[];
     installments: number;
-    discount: number;
 };
