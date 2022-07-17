@@ -25,7 +25,7 @@ const NavLink: FC<NavLinkProps> = ({ href, icon, children }) => {
     return (
         <Link href={href} passHref>
             <Anchor>
-                <Icon />
+                <Icon aria-label={`${icon} icon`} />
 
                 {children}
             </Anchor>
