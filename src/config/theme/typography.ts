@@ -1,9 +1,11 @@
 type FontFamilies = 'text' | 'title';
 
 interface ISizes {
-    small: string;
-    medium: string;
-    large: string;
+    xs: string;
+    sm: string;
+    md: string;
+    lg: string;
+    xl: string;
 }
 
 interface ITypography {
@@ -13,9 +15,11 @@ interface ITypography {
 
 const typography: ITypography = {
     sizes: {
-        small: '10px',
-        medium: '16px',
-        large: '22px',
+        xs: '0.25rem',
+        sm: '0.5rem',
+        md: '1rem',
+        lg: '2rem',
+        xl: '4rem',
     },
     family: {
         text: "'Roboto', sans-serif",

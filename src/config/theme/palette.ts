@@ -1,19 +1,4 @@
 interface PaletteOptions {
-    light: string;
-    main: string;
-    dark: string;
-}
-
-type PaletteKeys = 'primary' | 'secondary' | 'error';
-
-interface ContrastPallete {
-    light: string;
-    dark: string;
-}
-
-type ContrastPalleteKeys = 'contrast';
-
-interface ScalePallete {
     0: string;
     100: string;
     200: string;
@@ -27,31 +12,49 @@ interface ScalePallete {
     1000: string;
 }
 
-type ScalePalleteKeys = 'gray';
+type PaletteKeys = 'primary' | 'secondary' | 'error' | 'gray';
 
-type Palette = Record<PaletteKeys, PaletteOptions> &
-    Record<ContrastPalleteKeys, ContrastPallete> &
-    Record<ScalePalleteKeys, ScalePallete>;
+type Palette = Record<PaletteKeys, PaletteOptions>;
 
-export const lightPalette: Palette = {
+export const palette: Palette = {
     primary: {
-        light: '#f68c6f',
-        main: '#d83a0e',
-        dark: '#782008',
+        0: '#e6fbff',
+        100: '#B3F3FE',
+        200: '#A6E7F3',
+        300: '#99DBE8',
+        400: '#8CCFDE',
+        500: '#7FC3D3',
+        600: '#71B7C8',
+        700: '#579FB3',
+        800: '#4A93A8',
+        900: '#3D879D',
+        1000: '#244f5c',
     },
     secondary: {
-        light: '#f7df88',
-        main: '#f2cb40',
-        dark: '#d7ab0f',
+        0: '#ECD5DB',
+        100: '#D29DAC',
+        200: '#C28F9E',
+        300: '#B3818F',
+        400: '#A37381',
+        500: '#946573',
+        600: '#845864',
+        700: '#754A56',
+        800: '#653C48',
+        900: '#562E39',
+        1000: '#46202B',
     },
     error: {
-        light: '#fe6776',
-        main: '#C20114',
-        dark: '#65010b',
-    },
-    contrast: {
-        light: '#E6EAEA',
-        dark: '#031717',
+        0: '#FFDED6',
+        100: '#FFAC99',
+        200: '#F39C88',
+        300: '#E68C77',
+        400: '#DA7B66',
+        500: '#CD6B55',
+        600: '#C15B44',
+        700: '#B44B33',
+        800: '#A83A22',
+        900: '#9B2A11',
+        1000: '#8F1A00',
     },
     gray: {
         0: '#FFFFFF',
@@ -65,40 +68,5 @@ export const lightPalette: Palette = {
         800: '#375758',
         900: '#1E4243',
         1000: '#052D2E',
-    },
-};
-
-export const darkPalette: Palette = {
-    primary: {
-        light: '#d1977b',
-        main: '#BE6E46',
-        dark: '#844b2e',
-    },
-    secondary: {
-        light: '#a873f2',
-        main: '#8338EC',
-        dark: '#420d8c',
-    },
-    error: {
-        light: '#f47180',
-        main: '#ef233c',
-        dark: '#8e0b1a',
-    },
-    contrast: {
-        light: '#efeef6',
-        dark: '#0A0911',
-    },
-    gray: {
-        0: '#0A0911',
-        100: '#1C1B25',
-        200: '#2E2D3A',
-        300: '#413F4E',
-        400: '#535162',
-        500: '#656377',
-        600: '#77748B',
-        700: '#89869F',
-        800: '#9C98B3',
-        900: '#AEAAC8',
-        1000: '#C0BCDC',
     },
 };

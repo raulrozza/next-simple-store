@@ -9,7 +9,7 @@ interface Spacing {
 
 const valueToString = (value: Space, factor: number): string => {
     if (typeof value === 'string') return value;
-    return `${value * factor}px`;
+    return `${value * factor}rem`;
 };
 
 const spacing =
@@ -22,13 +22,15 @@ const spacing =
     };
 
 const layout = {
-    spacing: spacing(4),
+    spacing: spacing(1),
+    size: spacing(3),
     borderRadius: {
-        small: '4px',
-        medium: '10px',
-        large: '16px',
+        xs: '0.125rem',
+        sm: '0.25rem',
+        md: '0.5rem',
+        lg: '1rem',
+        xl: '2rem',
     },
-    size: spacing(12),
 };
 
 export default layout;

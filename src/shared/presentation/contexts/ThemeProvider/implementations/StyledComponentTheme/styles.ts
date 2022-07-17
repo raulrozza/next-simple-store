@@ -28,10 +28,10 @@ ${({ theme }) => css`
     }
 
     a {
-        color: ${theme.palette.secondary.main};
+        color: ${theme.palette.secondary['500']};
         transition: all 0.2s;
         &:hover {
-            color: ${theme.palette.secondary.light};
+            color: ${theme.palette.secondary['200']};
         }
     }
 
