@@ -22,8 +22,8 @@ const spacing =
     };
 
 const layout = {
-    spacing: spacing(1),
-    size: spacing(3),
+    spacing: spacing(0.5),
+    size: spacing(1.5),
     borderRadius: {
         xs: '0.125rem',
         sm: '0.25rem',

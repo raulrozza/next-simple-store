@@ -1,16 +1,15 @@
 import Head from 'next/head';
-import Link from 'next/link';
 
-export default function Home() {
+import Home from '@/shared/presentation/view/pages/Home';
+
+export default function HomePage() {
     return (
-        <div>
+        <>
             <Head>
                 <title>Next Simple Store</title>
             </Head>
 
-            <h1>Next Simple Store</h1>
-
-            <Link href="https://www.google.com">Google</Link>
-        </div>
+            <Home />
+        </>
     );
 }

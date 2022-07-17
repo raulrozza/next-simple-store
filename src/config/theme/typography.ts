@@ -15,9 +15,9 @@ interface ITypography {
 
 const typography: ITypography = {
     sizes: {
-        xs: '0.25rem',
-        sm: '0.5rem',
-        md: '1rem',
+        xs: '0.75rem',
+        sm: '1rem',
+        md: '1.5rem',
         lg: '2rem',
         xl: '4rem',
     },
