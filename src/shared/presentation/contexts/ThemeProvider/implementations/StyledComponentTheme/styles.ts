@@ -17,8 +17,10 @@ ${({ theme }) => css`
     body,
     input,
     textarea,
+    a,
     button {
         font-family: ${theme.typography.family.text};
+        font-size: ${theme.typography.sizes.sm};
         color: ${theme.palette.gray['1000']};
     }
 
@@ -28,11 +30,8 @@ ${({ theme }) => css`
     }
 
     a {
-        color: ${theme.palette.secondary['500']};
-        transition: all 0.2s;
-        &:hover {
-            color: ${theme.palette.secondary['200']};
-        }
+        cursor: pointer;
+        text-decoration: none;
     }
 
     button {

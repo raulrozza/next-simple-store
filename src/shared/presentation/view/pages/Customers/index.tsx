@@ -8,9 +8,9 @@ const Customers: FC = () => {
     const { pathname } = useRouter();
 
     return (
-        <div>
+        <section>
             <Menu activeItem={pathname} />
-        </div>
+        </section>
     );
 };
 
