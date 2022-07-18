@@ -4,9 +4,10 @@ import Link from 'next/link';
 
 import { IProduct } from '@/shared/domain/entities/Product';
 import { Button, Spacing } from '@/shared/presentation/view/components/atoms';
+import { ProductInfoItem } from '@/shared/presentation/view/components/molecules';
 import { Menu } from '@/shared/presentation/view/components/organisms';
 
-import { ButtonPanel, Container, Content, List, ListItem } from './styles';
+import { ButtonPanel, Container, Content, List } from './styles';
 
 const Products: FC = () => {
     const products: IProduct[] = [
@@ -48,30 +49,10 @@ const Products: FC = () => {
 
                     <List as="ul">
                         {products.map(product => (
-                            <ListItem key={product.id}>
-                                <h4>{product.name}</h4>
-                                <p className="description">
-                                    {product.description}
-                                </p>
-                                <p className="slug">
-                                    Slug: <em>{product.slug}</em>
-                                </p>
-                                <strong className="price">
-                                    Price: ${product.price}
-                                </strong>
-                                <Link
-                                    href={`/products/edit/${product.id}`}
-                                    passHref
-                                >
-                                    <Button
-                                        variant="secondary"
-                                        icon="edit"
-                                        asAnchor
-                                    >
-                                        Edit
-                                    </Button>
-                                </Link>
-                            </ListItem>
+                            <ProductInfoItem
+                                key={product.id}
+                                product={product}
+                            />
                         ))}
                     </List>
                 </Content>
