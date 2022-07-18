@@ -16,6 +16,9 @@ export default class CreateOrder {
         installments,
         products: productOrderRequests,
     }: ICreateOrderDTO): Promise<IOrder> {
+        if (this.isWeekend())
+            throw new Error('Cannot accept orders during the weekend');
+
         const customer = await this.customersRepository.getById(customerId);
         if (!customer) throw new Error('Customer not found');
 
@@ -34,6 +37,12 @@ export default class CreateOrder {
             throw new Error('Customer installment limit exceeded');
 
         return this.ordersRepository.create(order);
+    }
+
+    private isWeekend(): boolean {
+        const date = new Date();
+        const day = date.getDay();
+        return day === 0 || day === 6;
     }
 
     private async getProducts(

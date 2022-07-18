@@ -27,6 +27,18 @@ const makeUseCase = () => {
 };
 
 describe('CreateOrder', () => {
+    const defaultDate = new Date('2022-07-18T03:24:00Z');
+    const saturdayDate = new Date('2022-07-16T03:24:00Z');
+    const sundayDate = new Date('2022-07-17T03:24:00Z');
+
+    beforeAll(() => {
+        jest.useFakeTimers();
+    });
+
+    beforeEach(() => {
+        jest.setSystemTime(defaultDate);
+    });
+
     it('should create a order with one product and a discount at 1 installment', async () => {
         const { createOrderUseCase, customersRepository, productsRepository } =
             makeUseCase();
@@ -129,6 +141,47 @@ describe('CreateOrder', () => {
                 },
             ],
         });
+    });
+
+    it('should throw if trying to create the order during the weekend', async () => {
+        const { createOrderUseCase, customersRepository, productsRepository } =
+            makeUseCase();
+
+        const customer = await customersRepository.create({
+            address: faker.address.streetAddress(),
+            creditLimit: 900,
+            installmentLimit: 10,
+            name: faker.name.firstName(),
+        });
+        const product = await productsRepository.create({
+            description: faker.lorem.sentence(),
+            name: faker.commerce.productName(),
+            price: 10,
+            slug: faker.lorem.slug(),
+        });
+
+        const order: ICreateOrderDTO = {
+            customerId: customer.id,
+            installments: 1,
+            products: [
+                {
+                    productId: product.id,
+                    quantity: 1,
+                },
+            ],
+        };
+
+        jest.setSystemTime(saturdayDate);
+
+        expect(createOrderUseCase.execute(order)).rejects.toThrow(
+            'Cannot accept orders during the weekend',
+        );
+
+        jest.setSystemTime(sundayDate);
+
+        expect(createOrderUseCase.execute(order)).rejects.toThrow(
+            'Cannot accept orders during the weekend',
+        );
     });
 
     it('should throw if the customer does not exist', async () => {
