@@ -35,6 +35,12 @@ ${({ theme }) => css`
         }
     }
 
+    button {
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+
     h1,
     h2,
     h3,

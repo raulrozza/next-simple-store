@@ -6,7 +6,7 @@ export const Container = styled.ul`
     list-style: none;
 
     ${({ theme }) => css`
-        background-color: ${theme.palette.primary['900']};
+        background-color: ${theme.palette.gray['0']};
 
         padding: ${theme.layout.spacing(2)};
     `}

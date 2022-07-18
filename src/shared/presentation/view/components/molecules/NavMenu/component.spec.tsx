@@ -25,6 +25,7 @@ describe('NavMenu', () => {
                         text: 'Customers',
                     },
                 ]}
+                activeItem="/customers"
             />,
             {
                 wrapper: ThemeProvider,

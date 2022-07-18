@@ -28,8 +28,7 @@
         "@typescript-eslint",
         "prettier",
         "jest",
-        "testing-library",
-        "jsx-a11y"
+        "testing-library"
     ],
     "rules": {
         "prettier/prettier":[

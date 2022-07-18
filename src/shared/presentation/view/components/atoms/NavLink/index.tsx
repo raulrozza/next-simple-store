@@ -17,14 +17,15 @@ const ICONS = {
 interface NavLinkProps {
     href: string;
     icon: keyof typeof ICONS;
+    active: boolean;
 }
 
-const NavLink: FC<NavLinkProps> = ({ href, icon, children }) => {
+const NavLink: FC<NavLinkProps> = ({ href, icon, active, children }) => {
     const Icon = ICONS[icon];
 
     return (
         <Link href={href} passHref>
-            <Anchor>
+            <Anchor aria-selected={active} active={active}>
                 <Icon aria-label={`${icon} icon`} />
 
                 {children}
