@@ -6,7 +6,7 @@ import { ITextArea } from '@/shared/presentation/entities/Field';
 
 import { ErrorContainer, StyledTextArea } from './styles';
 
-const TextArea: FC<ITextArea> = ({ name, ...props }) => {
+const TextArea: FC<Omit<ITextArea, 'type'>> = ({ name, ...props }) => {
     const [field, meta] = useField(name);
 
     const hasErrors = Boolean(meta.touched && meta.error);

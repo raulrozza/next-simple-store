@@ -61,20 +61,6 @@ describe('Input', () => {
 
             expect(screen.getByDisplayValue(/new value/)).toBeDefined();
         });
-
-        xit('should adapt the field value to mask if was passed', async () => {
-            render(
-                <Formik
-                    initialValues={{ input: '12345678910' }}
-                    onSubmit={jest.fn()}
-                >
-                    <Input name="input" mask="cpf" />
-                </Formik>,
-                { wrapper: ThemeProvider },
-            );
-
-            expect(screen.getByDisplayValue('123.456.789-10')).toBeDefined();
-        });
     });
 
     describe('Error handling', () => {

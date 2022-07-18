@@ -4,8 +4,7 @@ import { Formik, Form } from 'formik';
 
 import {
     Button,
-    Input,
-    TextArea,
+    FieldFactory,
 } from '@/shared/presentation/view/components/atoms';
 import { Menu } from '@/shared/presentation/view/components/organisms';
 
@@ -22,9 +21,14 @@ const NewProduct: FC = () => {
                     onSubmit={console.log}
                 >
                     <Form>
-                        <Input name="name" placeholder="Name" />
+                        <FieldFactory
+                            type="text"
+                            name="name"
+                            placeholder="Name"
+                        />
 
-                        <TextArea
+                        <FieldFactory
+                            type="textarea"
                             name="description"
                             placeholder="Description"
                         />

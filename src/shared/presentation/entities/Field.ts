@@ -1,9 +1,14 @@
 interface BaseField {
+    type: string;
     name: string;
     placeholder?: string;
 }
 
-export type IInput = BaseField;
-export type ITextArea = BaseField;
+export interface IInput extends BaseField {
+    type: 'text';
+}
+export interface ITextArea extends BaseField {
+    type: 'textarea';
+}
 
-export type Field = IInput | ITextArea;
+export type IField = IInput | ITextArea;

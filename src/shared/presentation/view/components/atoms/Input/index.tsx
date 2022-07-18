@@ -6,7 +6,7 @@ import { IInput } from '@/shared/presentation/entities/Field';
 
 import { ErrorContainer, StyledInput } from './styles';
 
-const Input: FC<IInput> = ({ name, ...props }) => {
+const Input: FC<Omit<IInput, 'type'>> = ({ name, ...props }) => {
     const [field, meta] = useField(name);
 
     const hasErrors = Boolean(meta.touched && meta.error);
