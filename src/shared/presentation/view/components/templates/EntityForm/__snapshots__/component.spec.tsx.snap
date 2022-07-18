@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Form should render the Form correctly 1`] = `
+exports[`EntityForm should render the component correctly, displaying the title and the form 1`] = `
 Object {
   "asFragment": [Function],
-  "baseElement": .c2 {
+  "baseElement": .c4 {
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   -webkit-transition: background-color 0.2s;
@@ -21,56 +21,67 @@ Object {
   color: #FFFFFF;
 }
 
-.c2:hover {
+.c4:hover {
   background-color: #845864;
 }
 
-.c0 {
-  background-color: #FFFFFF;
-  border: 2px solid #E6EAEA;
-  outline: none;
-  border-radius: 0.25rem;
-  width: 100%;
-  padding: 0.5rem;
-  -webkit-transition: outline 0.2s,border 0.2s;
-  transition: outline 0.2s,border 0.2s;
-}
-
-.c0:focus {
-  border-color: #8CCFDE;
-}
-
 .c1 {
-  margin-top: 0.5rem;
+  background-color: #FFFFFF;
+  border-radius: 1rem;
+}
+
+.c3 {
+  margin-top: 1rem;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c2 {
+  padding: 1rem;
+  margin: 0.25rem;
+  width: 100%;
+  max-width: 50rem;
 }
 
 <body>
     <div>
-      <form
-        action="#"
+      <section
+        class="c0"
       >
-        <div>
-          <input
-            class="c0"
-            name="input"
-            placeholder="my input"
-            value="my input"
-          />
-        </div>
-        <div
-          class="c1"
-          size="2"
-        />
-        <button
-          class="c2"
-          type="submit"
+        <main
+          class="c1 c2"
         >
-          Confirm
-        </button>
-      </form>
+          <h1>
+            Form
+          </h1>
+          <div
+            class="c3"
+            size="4"
+          />
+          <form
+            action="#"
+          >
+            <button
+              class="c4"
+              type="submit"
+            >
+              Button
+            </button>
+          </form>
+        </main>
+      </section>
     </div>
   </body>,
-  "container": .c2 {
+  "container": .c4 {
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   -webkit-transition: background-color 0.2s;
@@ -88,52 +99,63 @@ Object {
   color: #FFFFFF;
 }
 
-.c2:hover {
+.c4:hover {
   background-color: #845864;
 }
 
-.c0 {
-  background-color: #FFFFFF;
-  border: 2px solid #E6EAEA;
-  outline: none;
-  border-radius: 0.25rem;
-  width: 100%;
-  padding: 0.5rem;
-  -webkit-transition: outline 0.2s,border 0.2s;
-  transition: outline 0.2s,border 0.2s;
-}
-
-.c0:focus {
-  border-color: #8CCFDE;
-}
-
 .c1 {
-  margin-top: 0.5rem;
+  background-color: #FFFFFF;
+  border-radius: 1rem;
+}
+
+.c3 {
+  margin-top: 1rem;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c2 {
+  padding: 1rem;
+  margin: 0.25rem;
+  width: 100%;
+  max-width: 50rem;
 }
 
 <div>
-    <form
-      action="#"
+    <section
+      class="c0"
     >
-      <div>
-        <input
-          class="c0"
-          name="input"
-          placeholder="my input"
-          value="my input"
-        />
-      </div>
-      <div
-        class="c1"
-        size="2"
-      />
-      <button
-        class="c2"
-        type="submit"
+      <main
+        class="c1 c2"
       >
-        Confirm
-      </button>
-    </form>
+        <h1>
+          Form
+        </h1>
+        <div
+          class="c3"
+          size="4"
+        />
+        <form
+          action="#"
+        >
+          <button
+            class="c4"
+            type="submit"
+          >
+            Button
+          </button>
+        </form>
+      </main>
+    </section>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

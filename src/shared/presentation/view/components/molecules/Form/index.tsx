@@ -1,13 +1,13 @@
 import { FC, Fragment } from 'react';
 
+import { Form as FormikForm } from 'formik';
+
 import { IField } from '@/shared/presentation/entities/Field';
 import {
     Button,
     FieldFactory,
     Spacing,
 } from '@/shared/presentation/view/components/atoms';
-
-import { StyledForm } from './styles';
 
 interface FormProps {
     fields: IField[];
@@ -17,7 +17,7 @@ interface FormProps {
 }
 
 const Form: FC<FormProps> = ({ fields, button }) => (
-    <StyledForm>
+    <FormikForm>
         {fields.map(field => (
             <Fragment key={field.name}>
                 <FieldFactory {...field} />
@@ -29,7 +29,7 @@ const Form: FC<FormProps> = ({ fields, button }) => (
         <Button type="submit" variant="secondary">
             {button.text}
         </Button>
-    </StyledForm>
+    </FormikForm>
 );
 
 export default Form;

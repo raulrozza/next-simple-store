@@ -4,7 +4,7 @@ exports[`Button should render an icon if the icon prop is passed 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": .c0 {
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
@@ -48,7 +48,7 @@ Object {
     </div>
   </body>,
   "container": .c0 {
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
@@ -147,7 +147,7 @@ exports[`Button should render the component correctly 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": .c0 {
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
@@ -177,7 +177,7 @@ Object {
     </div>
   </body>,
   "container": .c0 {
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
@@ -262,7 +262,7 @@ exports[`Button should render the element as an anchor if the asAnchor prop is p
 Object {
   "asFragment": [Function],
   "baseElement": .c0 {
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
@@ -292,7 +292,7 @@ Object {
     </div>
   </body>,
   "container": .c0 {
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
@@ -377,7 +377,7 @@ exports[`Button styles should render each button variant with the correct styles
 Object {
   "asFragment": [Function],
   "baseElement": .c0 {
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
@@ -399,7 +399,7 @@ Object {
 }
 
 .c1 {
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
@@ -421,7 +421,7 @@ Object {
 }
 
 .c2 {
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
@@ -461,7 +461,7 @@ Object {
     </div>
   </body>,
   "container": .c0 {
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
@@ -483,7 +483,7 @@ Object {
 }
 
 .c1 {
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
@@ -505,7 +505,7 @@ Object {
 }
 
 .c2 {
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;

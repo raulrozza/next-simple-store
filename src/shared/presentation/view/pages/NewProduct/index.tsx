@@ -2,40 +2,52 @@ import { FC } from 'react';
 
 import { Formik } from 'formik';
 
-import { Form } from '@/shared/presentation/view/components/molecules';
 import { Menu } from '@/shared/presentation/view/components/organisms';
-
-// import { Container } from './styles';
+import { EntityForm } from '@/shared/presentation/view/components/templates';
 
 const NewProduct: FC = () => {
     return (
         <section>
             <Menu activeItem="/products" />
 
-            <main>
-                <Formik
-                    initialValues={{ name: '', description: '' }}
-                    onSubmit={console.log}
-                >
-                    <Form
-                        fields={[
-                            {
-                                type: 'text',
-                                name: 'name',
-                                placeholder: 'Name',
-                            },
-                            {
-                                type: 'textarea',
-                                name: 'description',
-                                placeholder: 'Description',
-                            },
-                        ]}
-                        button={{
-                            text: 'Create',
-                        }}
-                    />
-                </Formik>
-            </main>
+            <Formik
+                initialValues={{
+                    name: '',
+                    description: '',
+                    slug: '',
+                    price: '',
+                }}
+                onSubmit={console.log}
+            >
+                <EntityForm
+                    title="Create Product"
+                    fields={[
+                        {
+                            type: 'text',
+                            name: 'name',
+                            placeholder: 'Name',
+                        },
+                        {
+                            type: 'textarea',
+                            name: 'description',
+                            placeholder: 'Description',
+                        },
+                        {
+                            type: 'text',
+                            name: 'slug',
+                            placeholder: 'Slug',
+                        },
+                        {
+                            type: 'text',
+                            name: 'price',
+                            placeholder: 'Price',
+                        },
+                    ]}
+                    button={{
+                        text: 'Create',
+                    }}
+                />
+            </Formik>
         </section>
     );
 };

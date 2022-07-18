@@ -38,7 +38,7 @@ const VARIANT_STYLES = {
 
 export const StyledButton = styled.button<StyledButtonProps>`
     ${({ theme, variant }) => css`
-        padding: ${theme.layout.spacing(2)};
+        padding: ${theme.layout.spacing(2, 4)};
         border-radius: ${theme.layout.borderRadius.md};
         transition: background-color 0.2s;
 

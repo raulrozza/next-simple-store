@@ -6,7 +6,7 @@ import { ThemeProvider } from '@/shared/presentation/contexts';
 import Spacing from './index';
 
 describe('Spacing', () => {
-    it('should render the input with the correct spacing', () => {
+    it('should render the div with the correct spacing', () => {
         const view = render(<Spacing size={3} data-testid="spacing" />, {
             wrapper: ThemeProvider,
         });
