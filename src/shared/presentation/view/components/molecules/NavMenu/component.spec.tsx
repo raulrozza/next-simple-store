@@ -6,7 +6,7 @@ import NavMenu from './index';
 
 describe('NavMenu', () => {
     it('should render the component correctly, displaying all the options', () => {
-        render(
+        const view = render(
             <NavMenu
                 items={[
                     {
@@ -35,6 +35,6 @@ describe('NavMenu', () => {
         expect(screen.getByText('Home')).toBeInTheDocument();
         expect(screen.getByText('Products')).toBeInTheDocument();
         expect(screen.getByText('Customers')).toBeInTheDocument();
-        expect(screen).toMatchSnapshot();
+        expect(view).toMatchSnapshot();
     });
 });

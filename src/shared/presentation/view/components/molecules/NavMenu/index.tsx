@@ -15,13 +15,18 @@ interface NavMenuItem
 interface NavMenuProps {
     items: NavMenuItem[];
     activeItem: string;
+    direction?: 'column' | 'row';
     children?: never;
 }
 
-const NavMenu: FC<NavMenuProps> = ({ items, activeItem }) => (
-    <Container>
+const NavMenu: FC<NavMenuProps> = ({
+    items,
+    activeItem,
+    direction = 'column',
+}) => (
+    <Container direction={direction} role="menu">
         {items.map(item => (
-            <ListItem key={item.href}>
+            <ListItem key={item.href} role="menuitem">
                 <NavLink
                     href={item.href}
                     icon={item.icon}

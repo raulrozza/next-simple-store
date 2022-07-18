@@ -31,6 +31,9 @@ const layout = {
         lg: '1rem',
         xl: '2rem',
     },
+    breakpoints: {
+        md: '768px',
+    },
 };
 
 export default layout;

@@ -4,35 +4,70 @@ import Drawer from 'react-modern-drawer';
 
 import { NavMenu } from '@/shared/presentation/view/components/molecules';
 
-import { MenuButton, MenuIcon } from './styles';
+import { DrawerMenu, HorizontalMenu, MenuButton, MenuIcon } from './styles';
 
 import 'react-modern-drawer/dist/index.css';
 
 const DRAWER_SIZE = 200;
 
 interface MenuProps {
-    items: ComponentPropsWithoutRef<typeof NavMenu>['items'];
     activeItem: string;
 }
 
-const Menu: FC<MenuProps> = ({ items, activeItem }) => {
+const ITEMS: ComponentPropsWithoutRef<typeof NavMenu>['items'] = [
+    {
+        href: '/',
+        icon: 'home',
+        text: 'Home',
+    },
+    {
+        href: '/products',
+        icon: 'list',
+        text: 'Products',
+    },
+    {
+        href: '/customers',
+        icon: 'people',
+        text: 'Customers',
+    },
+    {
+        href: '/orders',
+        icon: 'shopping',
+        text: 'Orders',
+    },
+];
+
+const Menu: FC<MenuProps> = ({ activeItem }) => {
     const [drawerOpen, setDrawerOpen] = useState(false);
 
-    return (
-        <div>
-            <MenuButton onClick={() => setDrawerOpen(true)}>
-                <MenuIcon />
-            </MenuButton>
+    const toggleDrawer = () => setDrawerOpen(open => !open);
 
-            <Drawer
-                open={drawerOpen}
-                onClose={() => setDrawerOpen(false)}
-                direction="left"
-                size={DRAWER_SIZE}
-            >
-                <NavMenu items={items} activeItem={activeItem} />
-            </Drawer>
-        </div>
+    return (
+        <section>
+            <HorizontalMenu>
+                <NavMenu
+                    items={ITEMS}
+                    activeItem={activeItem}
+                    direction="row"
+                />
+            </HorizontalMenu>
+
+            <DrawerMenu>
+                <MenuButton onClick={toggleDrawer} role="button">
+                    <MenuIcon />
+                </MenuButton>
+
+                <Drawer
+                    open={drawerOpen}
+                    onClose={toggleDrawer}
+                    direction="left"
+                    size={DRAWER_SIZE}
+                    data-testid="menu-Drawer"
+                >
+                    <NavMenu items={ITEMS} activeItem={activeItem} />
+                </Drawer>
+            </DrawerMenu>
+        </section>
     );
 };
 

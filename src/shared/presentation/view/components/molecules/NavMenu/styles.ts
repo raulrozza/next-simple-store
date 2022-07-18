@@ -1,13 +1,35 @@
 import { transparentize } from 'polished';
 import styled, { css } from 'styled-components';
 
-export const Container = styled.ul`
-    height: 100%;
+interface ContainerProps {
+    direction: 'row' | 'column';
+}
+
+const DIRECTION_STYLES = {
+    row: css`
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        ${({ theme }) => css`
+            gap: ${theme.layout.spacing(4)};
+        `}
+    `,
+    column: css`
+        flex-direction: column;
+        height: 100%;
+        ${({ theme }) => css`
+            background-color: ${theme.palette.gray['0']};
+        `}
+    `,
+};
+
+export const Container = styled.ul<ContainerProps>`
+    display: flex;
     list-style: none;
 
-    ${({ theme }) => css`
-        background-color: ${theme.palette.gray['0']};
+    ${({ direction }) => DIRECTION_STYLES[direction]}
 
+    ${({ theme }) => css`
         padding: ${theme.layout.spacing(2)};
     `}
 `;

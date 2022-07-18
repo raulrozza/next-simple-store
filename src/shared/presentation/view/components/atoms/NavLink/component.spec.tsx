@@ -7,7 +7,7 @@ import NavLink from './index';
 
 describe('NavLink', () => {
     it('should render the component correctly displaying the correct icon and text', () => {
-        render(
+        const view = render(
             <NavLink href="/" icon="home" active={false}>
                 Home
             </NavLink>,
@@ -18,11 +18,11 @@ describe('NavLink', () => {
 
         expect(screen.getByText('Home')).toBeInTheDocument();
         expect(screen.getByLabelText('home icon')).toBeInTheDocument();
-        expect(screen).toMatchSnapshot();
+        expect(view).toMatchSnapshot();
     });
 
     it('should render the a primary color and data selected active if the active prop is true', () => {
-        render(
+        const view = render(
             <NavLink href="/" icon="home" active={true}>
                 Home
             </NavLink>,
@@ -38,6 +38,6 @@ describe('NavLink', () => {
             'aria-selected',
             'true',
         );
-        expect(screen).toMatchSnapshot();
+        expect(view).toMatchSnapshot();
     });
 });

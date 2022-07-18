@@ -9,31 +9,7 @@ const Home: FC = () => {
 
     return (
         <div>
-            <Menu
-                items={[
-                    {
-                        href: '/',
-                        icon: 'home',
-                        text: 'Home',
-                    },
-                    {
-                        href: '/products',
-                        icon: 'list',
-                        text: 'Products',
-                    },
-                    {
-                        href: '/customers',
-                        icon: 'people',
-                        text: 'Customers',
-                    },
-                    {
-                        href: '/orders',
-                        icon: 'shopping',
-                        text: 'Orders',
-                    },
-                ]}
-                activeItem={pathname}
-            />
+            <Menu activeItem={pathname} />
         </div>
     );
 };
