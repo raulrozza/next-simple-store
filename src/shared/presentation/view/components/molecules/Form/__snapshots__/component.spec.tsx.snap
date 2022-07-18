@@ -1,9 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FieldFactory should render the components correctly with all the possible types 1`] = `
+exports[`Form should render the Form correctly 1`] = `
 Object {
   "asFragment": [Function],
-  "baseElement": .c1 {
+  "baseElement": .c3 {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.25rem;
+  background-color: #754A56;
+  color: #FFFFFF;
+}
+
+.c3:hover {
+  background-color: #845864;
+}
+
+.c1 {
   background-color: #FFFFFF;
   border: 2px solid #E6EAEA;
   outline: none;
@@ -18,43 +40,64 @@ Object {
   border-color: #8CCFDE;
 }
 
-.c0 {
-  background-color: #FFFFFF;
-  border: 2px solid #E6EAEA;
-  outline: none;
-  border-radius: 0.25rem;
-  width: 100%;
-  height: 6rem;
-  padding: 0.5rem;
-  -webkit-transition: outline 0.2s,border 0.2s;
-  transition: outline 0.2s,border 0.2s;
-  resize: none;
+.c2 {
+  margin-top: 0.5rem;
 }
 
-.c0:focus {
-  border-color: #8CCFDE;
+.c0 {
+  padding: 0.25rem;
 }
 
 <body>
     <div>
-      <div>
-        <textarea
-          class="c0"
-          name="textarea"
-          placeholder="Large text"
+      <form
+        action="#"
+        class="c0"
+      >
+        <div>
+          <input
+            class="c1"
+            name="input"
+            placeholder="my input"
+            value="my input"
+          />
+        </div>
+        <div
+          class="c2"
+          size="2"
         />
-      </div>
-      <div>
-        <input
-          class="c1"
-          name="text"
-          placeholder="Text"
-          value=""
-        />
-      </div>
+        <button
+          class="c3"
+          type="submit"
+        >
+          Confirm
+        </button>
+      </form>
     </div>
   </body>,
-  "container": .c1 {
+  "container": .c3 {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.25rem;
+  background-color: #754A56;
+  color: #FFFFFF;
+}
+
+.c3:hover {
+  background-color: #845864;
+}
+
+.c1 {
   background-color: #FFFFFF;
   border: 2px solid #E6EAEA;
   outline: none;
@@ -69,39 +112,38 @@ Object {
   border-color: #8CCFDE;
 }
 
-.c0 {
-  background-color: #FFFFFF;
-  border: 2px solid #E6EAEA;
-  outline: none;
-  border-radius: 0.25rem;
-  width: 100%;
-  height: 6rem;
-  padding: 0.5rem;
-  -webkit-transition: outline 0.2s,border 0.2s;
-  transition: outline 0.2s,border 0.2s;
-  resize: none;
+.c2 {
+  margin-top: 0.5rem;
 }
 
-.c0:focus {
-  border-color: #8CCFDE;
+.c0 {
+  padding: 0.25rem;
 }
 
 <div>
-    <div>
-      <textarea
-        class="c0"
-        name="textarea"
-        placeholder="Large text"
+    <form
+      action="#"
+      class="c0"
+    >
+      <div>
+        <input
+          class="c1"
+          name="input"
+          placeholder="my input"
+          value="my input"
+        />
+      </div>
+      <div
+        class="c2"
+        size="2"
       />
-    </div>
-    <div>
-      <input
-        class="c1"
-        name="text"
-        placeholder="Text"
-        value=""
-      />
-    </div>
+      <button
+        class="c3"
+        type="submit"
+      >
+        Confirm
+      </button>
+    </form>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

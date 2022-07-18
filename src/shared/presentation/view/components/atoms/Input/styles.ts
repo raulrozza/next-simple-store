@@ -7,7 +7,7 @@ interface InputProps {
 export const StyledInput = styled.input<InputProps>`
     ${({ theme, hasErrors }) => css`
         background-color: ${theme.palette.gray['0']};
-        border: 2px solid transparent;
+        border: 2px solid ${theme.palette.gray['100']};
         outline: none;
         border-radius: ${theme.layout.borderRadius.sm};
 

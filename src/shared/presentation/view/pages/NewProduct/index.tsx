@@ -1,11 +1,8 @@
 import { FC } from 'react';
 
-import { Formik, Form } from 'formik';
+import { Formik } from 'formik';
 
-import {
-    Button,
-    FieldFactory,
-} from '@/shared/presentation/view/components/atoms';
+import { Form } from '@/shared/presentation/view/components/molecules';
 import { Menu } from '@/shared/presentation/view/components/organisms';
 
 // import { Container } from './styles';
@@ -20,23 +17,23 @@ const NewProduct: FC = () => {
                     initialValues={{ name: '', description: '' }}
                     onSubmit={console.log}
                 >
-                    <Form>
-                        <FieldFactory
-                            type="text"
-                            name="name"
-                            placeholder="Name"
-                        />
-
-                        <FieldFactory
-                            type="textarea"
-                            name="description"
-                            placeholder="Description"
-                        />
-
-                        <Button type="submit" variant="secondary">
-                            Create
-                        </Button>
-                    </Form>
+                    <Form
+                        fields={[
+                            {
+                                type: 'text',
+                                name: 'name',
+                                placeholder: 'Name',
+                            },
+                            {
+                                type: 'textarea',
+                                name: 'description',
+                                placeholder: 'Description',
+                            },
+                        ]}
+                        button={{
+                            text: 'Create',
+                        }}
+                    />
                 </Formik>
             </main>
         </section>

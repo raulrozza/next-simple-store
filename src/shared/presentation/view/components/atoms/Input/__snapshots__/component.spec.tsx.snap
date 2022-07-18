@@ -5,7 +5,7 @@ Object {
   "asFragment": [Function],
   "baseElement": .c0 {
   background-color: #FFFFFF;
-  border: 2px solid transparent;
+  border: 2px solid #E6EAEA;
   outline: none;
   border-radius: 0.25rem;
   width: 100%;
@@ -31,7 +31,7 @@ Object {
   </body>,
   "container": .c0 {
   background-color: #FFFFFF;
-  border: 2px solid transparent;
+  border: 2px solid #E6EAEA;
   outline: none;
   border-radius: 0.25rem;
   width: 100%;
@@ -112,7 +112,7 @@ Object {
   "asFragment": [Function],
   "baseElement": .c0 {
   background-color: #FFFFFF;
-  border: 2px solid transparent;
+  border: 2px solid #E6EAEA;
   outline: none;
   border-radius: 0.25rem;
   width: 100%;
@@ -139,7 +139,7 @@ Object {
   </body>,
   "container": .c0 {
   background-color: #FFFFFF;
-  border: 2px solid transparent;
+  border: 2px solid #E6EAEA;
   outline: none;
   border-radius: 0.25rem;
   width: 100%;
