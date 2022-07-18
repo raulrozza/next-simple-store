@@ -6,19 +6,25 @@ import { ProductSchema } from '@/shared/presentation/validation/ProductSchema';
 import { Menu } from '@/shared/presentation/view/components/organisms';
 import { EntityForm } from '@/shared/presentation/view/components/templates';
 
+import { useNewProductController } from './hooks';
+
+const INITIAL_VALUES = {
+    name: '',
+    description: '',
+    slug: '',
+    price: '',
+};
+
 const NewProduct: FC = () => {
+    const { createProduct } = useNewProductController();
+
     return (
         <section>
             <Menu activeItem="/products" />
 
             <Formik
-                initialValues={{
-                    name: '',
-                    description: '',
-                    slug: '',
-                    price: '',
-                }}
-                onSubmit={console.log}
+                initialValues={INITIAL_VALUES}
+                onSubmit={createProduct}
                 validationSchema={ProductSchema}
             >
                 <EntityForm
