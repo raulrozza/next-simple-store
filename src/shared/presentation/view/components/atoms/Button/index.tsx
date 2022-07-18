@@ -1,10 +1,11 @@
 import { ButtonHTMLAttributes, FC } from 'react';
 
-import { FaPlus } from 'react-icons/fa';
+import { FaEdit, FaPlus } from 'react-icons/fa';
 
 import { StyledButton } from './styles';
 
 const ICONS = {
+    edit: FaEdit,
     plus: FaPlus,
 };
 

@@ -10,10 +10,6 @@ import 'react-modern-drawer/dist/index.css';
 
 const DRAWER_SIZE = 200;
 
-interface MenuProps {
-    activeItem: string;
-}
-
 const ITEMS: ComponentPropsWithoutRef<typeof NavMenu>['items'] = [
     {
         href: '/',
@@ -36,6 +32,10 @@ const ITEMS: ComponentPropsWithoutRef<typeof NavMenu>['items'] = [
         text: 'Orders',
     },
 ];
+
+interface MenuProps {
+    activeItem: '/' | '/products' | '/customers' | '/orders';
+}
 
 const Menu: FC<MenuProps> = ({ activeItem }) => {
     const [drawerOpen, setDrawerOpen] = useState(false);

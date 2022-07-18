@@ -48,7 +48,7 @@ const NewProduct: FC = () => {
                         {
                             type: 'text',
                             name: 'price',
-                            placeholder: 'Price',
+                            placeholder: 'Price ($)',
                         },
                     ]}
                     button={{
