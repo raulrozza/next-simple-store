@@ -3,6 +3,7 @@ import { FC } from 'react';
 import faker from 'faker';
 
 import { IProduct } from '@/shared/domain/entities/Product';
+import { useAddToCart } from '@/shared/presentation/contexts';
 import { Spacing } from '@/shared/presentation/view/components/atoms';
 import { CatalogItem } from '@/shared/presentation/view/components/molecules';
 import { Menu } from '@/shared/presentation/view/components/organisms';
@@ -12,6 +13,8 @@ import { Container, Content, Grid } from './styles';
 
 const Home: FC = () => {
     // const { products } = useHomeController();
+    const { addToCart } = useAddToCart();
+
     const products: IProduct[] = Array.from({ length: 10 }, () => ({
         id: faker.datatype.uuid(),
         name: faker.commerce.productName(),
@@ -40,7 +43,7 @@ const Home: FC = () => {
                                     ...product,
                                     imgAlt: `Placeholder for ${product.slug}`,
                                 }}
-                                onAddToCart={() => {}}
+                                onAddToCart={addToCart}
                             />
                         ))}
                     </Grid>
