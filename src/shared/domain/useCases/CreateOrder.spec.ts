@@ -27,9 +27,11 @@ const makeUseCase = () => {
 };
 
 describe('CreateOrder', () => {
-    const defaultDate = new Date('2022-07-18T03:24:00Z');
-    const saturdayDate = new Date('2022-07-16T03:24:00Z');
-    const sundayDate = new Date('2022-07-17T03:24:00Z');
+    const defaultDate = new Date('2022-07-18T13:00:00Z');
+    const saturdayDate = new Date('2022-07-16T13:00:00Z');
+    const sundayDate = new Date('2022-07-17T13:00:00Z');
+    const nonComercialDateBeforeOpen = new Date('2022-07-19T07:59:59Z');
+    const nonComercialDateAfterClose = new Date('2022-07-19T18:00:00Z');
 
     beforeAll(() => {
         jest.useFakeTimers();
@@ -181,6 +183,47 @@ describe('CreateOrder', () => {
 
         expect(createOrderUseCase.execute(order)).rejects.toThrow(
             'Cannot accept orders during the weekend',
+        );
+    });
+
+    it('should throw if trying to create the order outside of comercial time', async () => {
+        const { createOrderUseCase, customersRepository, productsRepository } =
+            makeUseCase();
+
+        const customer = await customersRepository.create({
+            address: faker.address.streetAddress(),
+            creditLimit: 900,
+            installmentLimit: 10,
+            name: faker.name.firstName(),
+        });
+        const product = await productsRepository.create({
+            description: faker.lorem.sentence(),
+            name: faker.commerce.productName(),
+            price: 10,
+            slug: faker.lorem.slug(),
+        });
+
+        const order: ICreateOrderDTO = {
+            customerId: customer.id,
+            installments: 1,
+            products: [
+                {
+                    productId: product.id,
+                    quantity: 1,
+                },
+            ],
+        };
+
+        jest.setSystemTime(nonComercialDateBeforeOpen);
+
+        expect(createOrderUseCase.execute(order)).rejects.toThrow(
+            'Cannot accept orders outside of the commercial time',
+        );
+
+        jest.setSystemTime(nonComercialDateAfterClose);
+
+        expect(createOrderUseCase.execute(order)).rejects.toThrow(
+            'Cannot accept orders outside of the commercial time',
         );
     });
 

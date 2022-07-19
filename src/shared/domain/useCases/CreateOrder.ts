@@ -4,6 +4,9 @@ import { ICustomersRepository } from '@/shared/domain/repositories/ICustomersRep
 import { IOrdersRepository } from '@/shared/domain/repositories/IOrdersRepository';
 import { IProductsRepository } from '@/shared/domain/repositories/IProductsRepository';
 
+const COMERCIAL_OPEN_HOUR = 8;
+const COMERCIAL_CLOSE_HOUR = 18;
+
 export default class CreateOrder {
     constructor(
         private readonly ordersRepository: IOrdersRepository,
@@ -18,6 +21,11 @@ export default class CreateOrder {
     }: ICreateOrderDTO): Promise<IOrder> {
         if (this.isWeekend())
             throw new Error('Cannot accept orders during the weekend');
+
+        if (!this.isComercialTime())
+            throw new Error(
+                'Cannot accept orders outside of the commercial time',
+            );
 
         const customer = await this.customersRepository.getById(customerId);
         if (!customer) throw new Error('Customer not found');
@@ -41,8 +49,14 @@ export default class CreateOrder {
 
     private isWeekend(): boolean {
         const date = new Date();
-        const day = date.getDay();
+        const day = date.getUTCDay();
         return day === 0 || day === 6;
+    }
+
+    private isComercialTime(): boolean {
+        const date = new Date();
+        const hour = date.getUTCHours();
+        return hour >= COMERCIAL_OPEN_HOUR && hour < COMERCIAL_CLOSE_HOUR;
     }
 
     private async getProducts(
