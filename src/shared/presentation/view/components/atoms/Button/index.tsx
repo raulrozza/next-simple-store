@@ -1,12 +1,13 @@
 import { ButtonHTMLAttributes, FC } from 'react';
 
-import { FaEdit, FaPlus } from 'react-icons/fa';
+import { FaCartPlus, FaEdit, FaPlus } from 'react-icons/fa';
 
 import { StyledButton } from './styles';
 
 const ICONS = {
     edit: FaEdit,
     plus: FaPlus,
+    cart: FaCartPlus,
 };
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
