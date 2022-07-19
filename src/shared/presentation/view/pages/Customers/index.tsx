@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-// import { CustomerInfoItem } from '@/shared/presentation/view/components/molecules';
+import { CustomerInfoItem } from '@/shared/presentation/view/components/molecules';
 import { Menu } from '@/shared/presentation/view/components/organisms';
 import { EntityManagerList } from '@/shared/presentation/view/components/templates';
 
@@ -21,7 +21,7 @@ const Customers: FC = () => {
                 title="Customers"
                 items={customers}
                 emptyText="There are no customers yet."
-                renderItem={({ item }) => <div>{item.name}</div>} // <CustomerInfoItem customer={item} />
+                renderItem={({ item }) => <CustomerInfoItem customer={item} />}
             />
         </section>
     );
