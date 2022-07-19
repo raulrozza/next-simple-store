@@ -1,15 +1,14 @@
 import { FC } from 'react';
 
 import faker from 'faker';
-import Image from 'next/image';
 
-import IMG_PLACEHOLDER from '@/assets/img/product.jpg';
 import { IProduct } from '@/shared/domain/entities/Product';
-import { Button, Spacing } from '@/shared/presentation/view/components/atoms';
+import { Spacing } from '@/shared/presentation/view/components/atoms';
+import { CatalogItem } from '@/shared/presentation/view/components/molecules';
 import { Menu } from '@/shared/presentation/view/components/organisms';
 
 import { useHomeController } from './hooks';
-import { QuantityRow, Container, Content, Grid, GridItem } from './styles';
+import { Container, Content, Grid } from './styles';
 
 const Home: FC = () => {
     // const { products } = useHomeController();
@@ -35,33 +34,14 @@ const Home: FC = () => {
 
                     <Grid>
                         {products.map(product => (
-                            <GridItem key={product.id}>
-                                <Image
-                                    src={IMG_PLACEHOLDER}
-                                    alt={`Placeholder for ${product.slug}`}
-                                    layout="responsive"
-                                />
-
-                                <strong>{product.name}</strong>
-
-                                <p className="price">
-                                    ${product.price.toFixed(2)}
-                                </p>
-
-                                <QuantityRow>
-                                    <label htmlFor={`quantity-${product.id}`}>
-                                        Quantity
-                                    </label>
-                                    <input
-                                        id={`quantity-${product.id}`}
-                                        type="number"
-                                    />
-                                </QuantityRow>
-
-                                <Button variant="secondary" icon="cart">
-                                    Add to cart
-                                </Button>
-                            </GridItem>
+                            <CatalogItem
+                                key={product.id}
+                                product={{
+                                    ...product,
+                                    imgAlt: `Placeholder for ${product.slug}`,
+                                }}
+                                onAddToCart={() => {}}
+                            />
                         ))}
                     </Grid>
                 </Content>
