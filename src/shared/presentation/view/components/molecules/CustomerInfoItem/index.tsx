@@ -22,7 +22,7 @@ const CustomerInfoItem: FC<CustomerInfoItemProps> = ({ customer }) => (
         </p>
 
         <p className="credit">
-            Credit limit: <strong>${customer.creditLimit}</strong>
+            Credit limit: <strong>${customer.creditLimit.toFixed(2)}</strong>
         </p>
 
         <Link href={`/customers/edit/${customer.id}`} passHref>

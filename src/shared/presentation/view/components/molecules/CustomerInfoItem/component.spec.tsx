@@ -12,7 +12,7 @@ describe('CustomerInfoItem', () => {
                     id: 'dshf9sdghsd',
                     name: 'Customer 1',
                     address: 'Address 1 of the initial customer named 1',
-                    creditLimit: 100.99,
+                    creditLimit: 100,
                     installmentLimit: 8,
                 }}
             />,
@@ -28,7 +28,7 @@ describe('CustomerInfoItem', () => {
         expect(screen.getByText('Installment limit:')).toBeInTheDocument();
         expect(screen.getByText('8')).toBeInTheDocument();
         expect(screen.getByText('Credit limit:')).toBeInTheDocument();
-        expect(screen.getByText('$100.99')).toBeInTheDocument();
+        expect(screen.getByText('$100.00')).toBeInTheDocument();
         expect(view).toMatchSnapshot();
     });
 });

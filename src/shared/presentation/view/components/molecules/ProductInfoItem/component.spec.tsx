@@ -12,7 +12,7 @@ describe('ProductInfoItem', () => {
                     id: 'dshf9sdghsd',
                     name: 'Product 1',
                     description: 'Description 1 of the initial product named 1',
-                    price: 100.99,
+                    price: 100.9,
                     slug: 'product-1',
                 }}
             />,
@@ -27,7 +27,7 @@ describe('ProductInfoItem', () => {
         ).toBeInTheDocument();
         expect(screen.getByText('Slug:')).toBeInTheDocument();
         expect(screen.getByText('product-1')).toBeInTheDocument();
-        expect(screen.getByText('Price: $100.99')).toBeInTheDocument();
+        expect(screen.getByText('Price: $100.90')).toBeInTheDocument();
         expect(view).toMatchSnapshot();
     });
 });

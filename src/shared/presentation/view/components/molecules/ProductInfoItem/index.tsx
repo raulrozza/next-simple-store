@@ -21,7 +21,7 @@ const ProductInfoItem: FC<ProductInfoItemProps> = ({ product }) => (
             Slug: <em>{product.slug}</em>
         </p>
 
-        <strong className="price">Price: ${product.price}</strong>
+        <strong className="price">Price: ${product.price.toFixed(2)}</strong>
 
         <Link href={`/products/edit/${product.id}`} passHref>
             <Button variant="secondary" icon="edit" asAnchor>
