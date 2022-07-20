@@ -116,6 +116,7 @@ Object {
           <input
             id="quantity-id"
             type="number"
+            value="1"
           />
         </div>
         <button
@@ -252,6 +253,7 @@ Object {
         <input
           id="quantity-id"
           type="number"
+          value="1"
         />
       </div>
       <button

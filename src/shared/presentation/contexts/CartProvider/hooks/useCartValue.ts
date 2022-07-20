@@ -3,5 +3,7 @@ import { useRecoilValue } from 'recoil';
 import { cartAtom } from '../atoms/cartAtom';
 
 export default function useCartValue() {
-    return useRecoilValue(cartAtom);
+    const cart = useRecoilValue(cartAtom);
+
+    return Object.values(cart);
 }

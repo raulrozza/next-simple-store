@@ -12,6 +12,8 @@ const isQuantityValid = (quantity: number) => {
     return !isNaN(quantity) && quantity > 0;
 };
 
+const DEFAULT_QUANTITY = '1';
+
 interface CatalogItemProps {
     product: IProduct & { imgAlt: string };
     onAddToCart: (params: { product: IProduct; quantity: number }) => void;
@@ -28,7 +30,7 @@ const CatalogItem: FC<CatalogItemProps> = ({ product, onAddToCart }) => {
         if (!isQuantityValid(quantity)) return;
 
         onAddToCart({ product, quantity });
-        inputRef.current.value = '';
+        inputRef.current.value = DEFAULT_QUANTITY;
     }, [onAddToCart, product]);
 
     return (
@@ -49,6 +51,7 @@ const CatalogItem: FC<CatalogItemProps> = ({ product, onAddToCart }) => {
                     id={`quantity-${product.id}`}
                     type="number"
                     ref={inputRef}
+                    defaultValue={DEFAULT_QUANTITY}
                 />
             </QuantityRow>
 

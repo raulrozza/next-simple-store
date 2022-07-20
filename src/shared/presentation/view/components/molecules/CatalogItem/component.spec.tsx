@@ -49,7 +49,7 @@ describe('CatalogItem', () => {
             wrapper: ThemeProvider,
         });
 
-        await userEvent.type(screen.getByLabelText('Quantity'), '2');
+        await userEvent.type(screen.getByLabelText('Quantity'), '{Backspace}2');
         await user.click(screen.getByText('Add to cart'));
 
         expect(onAddToCart).toHaveBeenCalledWith({
@@ -80,7 +80,10 @@ describe('CatalogItem', () => {
             },
         );
 
-        await userEvent.type(screen.getByLabelText('Quantity'), '-2');
+        await userEvent.type(
+            screen.getByLabelText('Quantity'),
+            '{Backspace}-2',
+        );
         await user.click(screen.getByText('Add to cart'));
 
         expect(onAddToCart).not.toHaveBeenCalled();
