@@ -1,0 +1,924 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Menu should render the component correctly, displaying all the options 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": .c8 {
+  display: none;
+}
+
+.c9 {
+  position: fixed;
+  visibility: hidden;
+  background: white;
+  -webkit-transition: all;
+  transition: all;
+  box-shadow: 0 0 10px 5px #00000029;
+  z-index: 101;
+  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate3d(-100%,0,0);
+  -ms-transform: translate3d(-100%,0,0);
+  transform: translate3d(-100%,0,0);
+  width: 200px;
+  height: 100vh;
+}
+
+.c11 {
+  display: none;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #000;
+  opacity: 0.4;
+  z-index: 100;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  gap: 0.25rem;
+  padding: 0.25rem 0.125rem;
+  color: #506C6D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-family: 'Open Sans',sans-serif;
+}
+
+.c3:hover {
+  color: #375758;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  gap: 0.25rem;
+  padding: 0.25rem 0.125rem;
+  color: #506C6D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-family: 'Open Sans',sans-serif;
+  color: #3D879D;
+}
+
+.c4:hover {
+  color: #375758;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+  background-color: #FFFFFF;
+  padding: 0.5rem;
+}
+
+.c2 {
+  background-color: transparent;
+  border-radius: 0.25rem;
+}
+
+.c2:hover {
+  background-color: rgba(230,234,234,0.1);
+}
+
+.c6 {
+  padding: 0.25rem;
+}
+
+.c7 {
+  font-size: 2rem;
+  color: #506C6D;
+}
+
+.c0 {
+  display: none;
+}
+
+@media (min-width:768px) {
+  .c5 {
+    display: none;
+  }
+}
+
+@media (min-width:768px) {
+  .c0 {
+    display: block;
+  }
+}
+
+<body>
+    <div>
+      <section>
+        <nav
+          class="c0"
+        >
+          <ul
+            class="c1"
+            direction="row"
+            role="menu"
+          >
+            <li
+              class="c2"
+              role="menuitem"
+            >
+              <a
+                aria-selected="false"
+                class="c3"
+                href="/"
+              >
+                <svg
+                  aria-label="home icon"
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 1024 1024"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M946.5 505L534.6 93.4a31.93 31.93 0 0 0-45.2 0L77.5 505c-12 12-18.8 28.3-18.8 45.3 0 35.3 28.7 64 64 64h43.4V908c0 17.7 14.3 32 32 32H448V716h112v224h265.9c17.7 0 32-14.3 32-32V614.3h43.4c17 0 33.3-6.7 45.3-18.8 24.9-25 24.9-65.5-.1-90.5z"
+                  />
+                </svg>
+                Home
+              </a>
+            </li>
+            <li
+              class="c2"
+              role="menuitem"
+            >
+              <a
+                aria-selected="false"
+                class="c3"
+                href="/products"
+              >
+                <svg
+                  aria-label="list icon"
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 512 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M464 480H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h416c26.51 0 48 21.49 48 48v352c0 26.51-21.49 48-48 48zM128 120c-22.091 0-40 17.909-40 40s17.909 40 40 40 40-17.909 40-40-17.909-40-40-40zm0 96c-22.091 0-40 17.909-40 40s17.909 40 40 40 40-17.909 40-40-17.909-40-40-40zm0 96c-22.091 0-40 17.909-40 40s17.909 40 40 40 40-17.909 40-40-17.909-40-40-40zm288-136v-32c0-6.627-5.373-12-12-12H204c-6.627 0-12 5.373-12 12v32c0 6.627 5.373 12 12 12h200c6.627 0 12-5.373 12-12zm0 96v-32c0-6.627-5.373-12-12-12H204c-6.627 0-12 5.373-12 12v32c0 6.627 5.373 12 12 12h200c6.627 0 12-5.373 12-12zm0 96v-32c0-6.627-5.373-12-12-12H204c-6.627 0-12 5.373-12 12v32c0 6.627 5.373 12 12 12h200c6.627 0 12-5.373 12-12z"
+                  />
+                </svg>
+                Products
+              </a>
+            </li>
+            <li
+              class="c2"
+              role="menuitem"
+            >
+              <a
+                aria-selected="true"
+                class="c4"
+                href="/customers"
+              >
+                <svg
+                  aria-label="people icon"
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 16 16"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
+                  />
+                  <path
+                    d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"
+                    fill-rule="evenodd"
+                  />
+                  <path
+                    d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"
+                  />
+                </svg>
+                Customers
+              </a>
+            </li>
+            <li
+              class="c2"
+              role="menuitem"
+            >
+              <a
+                aria-selected="false"
+                class="c3"
+                href="/orders"
+              >
+                <svg
+                  aria-label="shopping icon"
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 1024 1024"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M832 312H696v-16c0-101.6-82.4-184-184-184s-184 82.4-184 184v16H192c-17.7 0-32 14.3-32 32v536c0 17.7 14.3 32 32 32h640c17.7 0 32-14.3 32-32V344c0-17.7-14.3-32-32-32zm-208 0H400v-16c0-61.9 50.1-112 112-112s112 50.1 112 112v16z"
+                  />
+                </svg>
+                Orders
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <nav
+          class="c5"
+        >
+          <button
+            class="c6"
+            role="button"
+          >
+            <svg
+              class="c7"
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4 11h12v2H4zm0-5h16v2H4zm0 12h7.235v-2H4z"
+              />
+            </svg>
+          </button>
+          <div
+            data-testid="menu-Drawer"
+          >
+            <input
+              class="c8"
+              id="drawer-checkbox"
+              type="checkbox"
+            />
+            <nav
+              class="c9"
+              role="navigation"
+            >
+              <ul
+                class="c10"
+                direction="column"
+                role="menu"
+              >
+                <li
+                  class="c2"
+                  role="menuitem"
+                >
+                  <a
+                    aria-selected="false"
+                    class="c3"
+                    href="/"
+                  >
+                    <svg
+                      aria-label="home icon"
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 1024 1024"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M946.5 505L534.6 93.4a31.93 31.93 0 0 0-45.2 0L77.5 505c-12 12-18.8 28.3-18.8 45.3 0 35.3 28.7 64 64 64h43.4V908c0 17.7 14.3 32 32 32H448V716h112v224h265.9c17.7 0 32-14.3 32-32V614.3h43.4c17 0 33.3-6.7 45.3-18.8 24.9-25 24.9-65.5-.1-90.5z"
+                      />
+                    </svg>
+                    Home
+                  </a>
+                </li>
+                <li
+                  class="c2"
+                  role="menuitem"
+                >
+                  <a
+                    aria-selected="false"
+                    class="c3"
+                    href="/products"
+                  >
+                    <svg
+                      aria-label="list icon"
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 512 512"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M464 480H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h416c26.51 0 48 21.49 48 48v352c0 26.51-21.49 48-48 48zM128 120c-22.091 0-40 17.909-40 40s17.909 40 40 40 40-17.909 40-40-17.909-40-40-40zm0 96c-22.091 0-40 17.909-40 40s17.909 40 40 40 40-17.909 40-40-17.909-40-40-40zm0 96c-22.091 0-40 17.909-40 40s17.909 40 40 40 40-17.909 40-40-17.909-40-40-40zm288-136v-32c0-6.627-5.373-12-12-12H204c-6.627 0-12 5.373-12 12v32c0 6.627 5.373 12 12 12h200c6.627 0 12-5.373 12-12zm0 96v-32c0-6.627-5.373-12-12-12H204c-6.627 0-12 5.373-12 12v32c0 6.627 5.373 12 12 12h200c6.627 0 12-5.373 12-12zm0 96v-32c0-6.627-5.373-12-12-12H204c-6.627 0-12 5.373-12 12v32c0 6.627 5.373 12 12 12h200c6.627 0 12-5.373 12-12z"
+                      />
+                    </svg>
+                    Products
+                  </a>
+                </li>
+                <li
+                  class="c2"
+                  role="menuitem"
+                >
+                  <a
+                    aria-selected="true"
+                    class="c4"
+                    href="/customers"
+                  >
+                    <svg
+                      aria-label="people icon"
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 16 16"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
+                      />
+                      <path
+                        d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"
+                        fill-rule="evenodd"
+                      />
+                      <path
+                        d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"
+                      />
+                    </svg>
+                    Customers
+                  </a>
+                </li>
+                <li
+                  class="c2"
+                  role="menuitem"
+                >
+                  <a
+                    aria-selected="false"
+                    class="c3"
+                    href="/orders"
+                  >
+                    <svg
+                      aria-label="shopping icon"
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 1024 1024"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M832 312H696v-16c0-101.6-82.4-184-184-184s-184 82.4-184 184v16H192c-17.7 0-32 14.3-32 32v536c0 17.7 14.3 32 32 32h640c17.7 0 32-14.3 32-32V344c0-17.7-14.3-32-32-32zm-208 0H400v-16c0-61.9 50.1-112 112-112s112 50.1 112 112v16z"
+                      />
+                    </svg>
+                    Orders
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <label
+              class="c11"
+              data-testid="drawer-Overlay"
+              for="drawer-checkbox"
+            />
+          </div>
+        </nav>
+      </section>
+    </div>
+  </body>,
+  "container": .c8 {
+  display: none;
+}
+
+.c9 {
+  position: fixed;
+  visibility: hidden;
+  background: white;
+  -webkit-transition: all;
+  transition: all;
+  box-shadow: 0 0 10px 5px #00000029;
+  z-index: 101;
+  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate3d(-100%,0,0);
+  -ms-transform: translate3d(-100%,0,0);
+  transform: translate3d(-100%,0,0);
+  width: 200px;
+  height: 100vh;
+}
+
+.c11 {
+  display: none;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #000;
+  opacity: 0.4;
+  z-index: 100;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  gap: 0.25rem;
+  padding: 0.25rem 0.125rem;
+  color: #506C6D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-family: 'Open Sans',sans-serif;
+}
+
+.c3:hover {
+  color: #375758;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  gap: 0.25rem;
+  padding: 0.25rem 0.125rem;
+  color: #506C6D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-family: 'Open Sans',sans-serif;
+  color: #3D879D;
+}
+
+.c4:hover {
+  color: #375758;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+  background-color: #FFFFFF;
+  padding: 0.5rem;
+}
+
+.c2 {
+  background-color: transparent;
+  border-radius: 0.25rem;
+}
+
+.c2:hover {
+  background-color: rgba(230,234,234,0.1);
+}
+
+.c6 {
+  padding: 0.25rem;
+}
+
+.c7 {
+  font-size: 2rem;
+  color: #506C6D;
+}
+
+.c0 {
+  display: none;
+}
+
+@media (min-width:768px) {
+  .c5 {
+    display: none;
+  }
+}
+
+@media (min-width:768px) {
+  .c0 {
+    display: block;
+  }
+}
+
+<div>
+    <section>
+      <nav
+        class="c0"
+      >
+        <ul
+          class="c1"
+          direction="row"
+          role="menu"
+        >
+          <li
+            class="c2"
+            role="menuitem"
+          >
+            <a
+              aria-selected="false"
+              class="c3"
+              href="/"
+            >
+              <svg
+                aria-label="home icon"
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 1024 1024"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M946.5 505L534.6 93.4a31.93 31.93 0 0 0-45.2 0L77.5 505c-12 12-18.8 28.3-18.8 45.3 0 35.3 28.7 64 64 64h43.4V908c0 17.7 14.3 32 32 32H448V716h112v224h265.9c17.7 0 32-14.3 32-32V614.3h43.4c17 0 33.3-6.7 45.3-18.8 24.9-25 24.9-65.5-.1-90.5z"
+                />
+              </svg>
+              Home
+            </a>
+          </li>
+          <li
+            class="c2"
+            role="menuitem"
+          >
+            <a
+              aria-selected="false"
+              class="c3"
+              href="/products"
+            >
+              <svg
+                aria-label="list icon"
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 512 512"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M464 480H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h416c26.51 0 48 21.49 48 48v352c0 26.51-21.49 48-48 48zM128 120c-22.091 0-40 17.909-40 40s17.909 40 40 40 40-17.909 40-40-17.909-40-40-40zm0 96c-22.091 0-40 17.909-40 40s17.909 40 40 40 40-17.909 40-40-17.909-40-40-40zm0 96c-22.091 0-40 17.909-40 40s17.909 40 40 40 40-17.909 40-40-17.909-40-40-40zm288-136v-32c0-6.627-5.373-12-12-12H204c-6.627 0-12 5.373-12 12v32c0 6.627 5.373 12 12 12h200c6.627 0 12-5.373 12-12zm0 96v-32c0-6.627-5.373-12-12-12H204c-6.627 0-12 5.373-12 12v32c0 6.627 5.373 12 12 12h200c6.627 0 12-5.373 12-12zm0 96v-32c0-6.627-5.373-12-12-12H204c-6.627 0-12 5.373-12 12v32c0 6.627 5.373 12 12 12h200c6.627 0 12-5.373 12-12z"
+                />
+              </svg>
+              Products
+            </a>
+          </li>
+          <li
+            class="c2"
+            role="menuitem"
+          >
+            <a
+              aria-selected="true"
+              class="c4"
+              href="/customers"
+            >
+              <svg
+                aria-label="people icon"
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 16 16"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
+                />
+                <path
+                  d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"
+                  fill-rule="evenodd"
+                />
+                <path
+                  d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"
+                />
+              </svg>
+              Customers
+            </a>
+          </li>
+          <li
+            class="c2"
+            role="menuitem"
+          >
+            <a
+              aria-selected="false"
+              class="c3"
+              href="/orders"
+            >
+              <svg
+                aria-label="shopping icon"
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 1024 1024"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M832 312H696v-16c0-101.6-82.4-184-184-184s-184 82.4-184 184v16H192c-17.7 0-32 14.3-32 32v536c0 17.7 14.3 32 32 32h640c17.7 0 32-14.3 32-32V344c0-17.7-14.3-32-32-32zm-208 0H400v-16c0-61.9 50.1-112 112-112s112 50.1 112 112v16z"
+                />
+              </svg>
+              Orders
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <nav
+        class="c5"
+      >
+        <button
+          class="c6"
+          role="button"
+        >
+          <svg
+            class="c7"
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M4 11h12v2H4zm0-5h16v2H4zm0 12h7.235v-2H4z"
+            />
+          </svg>
+        </button>
+        <div
+          data-testid="menu-Drawer"
+        >
+          <input
+            class="c8"
+            id="drawer-checkbox"
+            type="checkbox"
+          />
+          <nav
+            class="c9"
+            role="navigation"
+          >
+            <ul
+              class="c10"
+              direction="column"
+              role="menu"
+            >
+              <li
+                class="c2"
+                role="menuitem"
+              >
+                <a
+                  aria-selected="false"
+                  class="c3"
+                  href="/"
+                >
+                  <svg
+                    aria-label="home icon"
+                    fill="currentColor"
+                    height="1em"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 1024 1024"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M946.5 505L534.6 93.4a31.93 31.93 0 0 0-45.2 0L77.5 505c-12 12-18.8 28.3-18.8 45.3 0 35.3 28.7 64 64 64h43.4V908c0 17.7 14.3 32 32 32H448V716h112v224h265.9c17.7 0 32-14.3 32-32V614.3h43.4c17 0 33.3-6.7 45.3-18.8 24.9-25 24.9-65.5-.1-90.5z"
+                    />
+                  </svg>
+                  Home
+                </a>
+              </li>
+              <li
+                class="c2"
+                role="menuitem"
+              >
+                <a
+                  aria-selected="false"
+                  class="c3"
+                  href="/products"
+                >
+                  <svg
+                    aria-label="list icon"
+                    fill="currentColor"
+                    height="1em"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 512 512"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M464 480H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h416c26.51 0 48 21.49 48 48v352c0 26.51-21.49 48-48 48zM128 120c-22.091 0-40 17.909-40 40s17.909 40 40 40 40-17.909 40-40-17.909-40-40-40zm0 96c-22.091 0-40 17.909-40 40s17.909 40 40 40 40-17.909 40-40-17.909-40-40-40zm0 96c-22.091 0-40 17.909-40 40s17.909 40 40 40 40-17.909 40-40-17.909-40-40-40zm288-136v-32c0-6.627-5.373-12-12-12H204c-6.627 0-12 5.373-12 12v32c0 6.627 5.373 12 12 12h200c6.627 0 12-5.373 12-12zm0 96v-32c0-6.627-5.373-12-12-12H204c-6.627 0-12 5.373-12 12v32c0 6.627 5.373 12 12 12h200c6.627 0 12-5.373 12-12zm0 96v-32c0-6.627-5.373-12-12-12H204c-6.627 0-12 5.373-12 12v32c0 6.627 5.373 12 12 12h200c6.627 0 12-5.373 12-12z"
+                    />
+                  </svg>
+                  Products
+                </a>
+              </li>
+              <li
+                class="c2"
+                role="menuitem"
+              >
+                <a
+                  aria-selected="true"
+                  class="c4"
+                  href="/customers"
+                >
+                  <svg
+                    aria-label="people icon"
+                    fill="currentColor"
+                    height="1em"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
+                    />
+                    <path
+                      d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"
+                    />
+                  </svg>
+                  Customers
+                </a>
+              </li>
+              <li
+                class="c2"
+                role="menuitem"
+              >
+                <a
+                  aria-selected="false"
+                  class="c3"
+                  href="/orders"
+                >
+                  <svg
+                    aria-label="shopping icon"
+                    fill="currentColor"
+                    height="1em"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 1024 1024"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M832 312H696v-16c0-101.6-82.4-184-184-184s-184 82.4-184 184v16H192c-17.7 0-32 14.3-32 32v536c0 17.7 14.3 32 32 32h640c17.7 0 32-14.3 32-32V344c0-17.7-14.3-32-32-32zm-208 0H400v-16c0-61.9 50.1-112 112-112s112 50.1 112 112v16z"
+                    />
+                  </svg>
+                  Orders
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <label
+            class="c11"
+            data-testid="drawer-Overlay"
+            for="drawer-checkbox"
+          />
+        </div>
+      </nav>
+    </section>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

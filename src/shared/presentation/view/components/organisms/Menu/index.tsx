@@ -1,14 +1,9 @@
 import { ComponentPropsWithoutRef, FC, useState } from 'react';
 
-import Drawer from 'react-modern-drawer';
-
+import { Drawer } from '@/shared/presentation/view/components/atoms';
 import { NavMenu } from '@/shared/presentation/view/components/molecules';
 
 import { DrawerMenu, HorizontalMenu, MenuButton, MenuIcon } from './styles';
-
-import 'react-modern-drawer/dist/index.css';
-
-const DRAWER_SIZE = 200;
 
 const ITEMS: ComponentPropsWithoutRef<typeof NavMenu>['items'] = [
     {
@@ -60,8 +55,6 @@ const Menu: FC<MenuProps> = ({ activeItem }) => {
                 <Drawer
                     open={drawerOpen}
                     onClose={toggleDrawer}
-                    direction="left"
-                    size={DRAWER_SIZE}
                     data-testid="menu-Drawer"
                 >
                     <NavMenu items={ITEMS} activeItem={activeItem} />
