@@ -16,6 +16,12 @@ describe('FieldFactory', () => {
                         name="textarea"
                     />
                     <FieldFactory type="text" name="text" placeholder="Text" />
+                    <FieldFactory
+                        type="select"
+                        name="select"
+                        placeholder="Select"
+                        options={[]}
+                    />
                 </>
             </Formik>,
             { wrapper: ThemeProvider },
@@ -23,6 +29,7 @@ describe('FieldFactory', () => {
 
         expect(screen.getByPlaceholderText('Large text')).toBeInTheDocument();
         expect(screen.getByPlaceholderText('Text')).toBeInTheDocument();
+        expect(screen.getByPlaceholderText('Select')).toBeInTheDocument();
         expect(view).toMatchSnapshot();
     });
 
