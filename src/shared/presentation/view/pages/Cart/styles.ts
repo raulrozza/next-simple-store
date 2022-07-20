@@ -26,3 +26,24 @@ export const List = styled.ul`
         gap: ${theme.layout.spacing(2)};
     `}
 `;
+
+export const ListFooter = styled.footer`
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    ${({ theme }) => css`
+        color: ${theme.palette.gray['0']};
+
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+
+            @media (min-width: ${theme.layout.breakpoints.md}) {
+                flex-direction: row;
+            }
+        }
+    `}
+`;
