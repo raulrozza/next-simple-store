@@ -1,22 +1,23 @@
 import { FC } from 'react';
 
-import faker from 'faker';
-
 import { IProduct } from '@/shared/domain/entities/Product';
 import { useAddToCart } from '@/shared/presentation/contexts';
 import { Spacing } from '@/shared/presentation/view/components/atoms';
-import { CatalogItem } from '@/shared/presentation/view/components/molecules';
+import {
+    CatalogItem,
+    CartHeader,
+} from '@/shared/presentation/view/components/molecules';
 import { Menu } from '@/shared/presentation/view/components/organisms';
 
 import { useHomeController } from './hooks';
 import { Container, Content, Grid } from './styles';
 
-const products: IProduct[] = Array.from({ length: 10 }, () => ({
-    id: faker.datatype.uuid(),
-    name: faker.commerce.productName(),
-    description: faker.lorem.paragraph(),
-    price: faker.datatype.number(),
-    slug: faker.commerce.productName(),
+const products: IProduct[] = Array.from({ length: 10 }, (_, index) => ({
+    id: `product-${index}`,
+    name: `Product N${index}`,
+    description: `This is the product ${index}, a very good one`,
+    price: index * 10,
+    slug: `product-${index}`,
 }));
 
 const Home: FC = () => {
@@ -29,7 +30,7 @@ const Home: FC = () => {
 
             <Container>
                 <Content>
-                    <h1>Catalog</h1>
+                    <CartHeader title="Catalog" />
 
                     <Spacing size={4} />
 

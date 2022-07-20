@@ -21,11 +21,14 @@ const CatalogItem: FC<CatalogItemProps> = ({ product, onAddToCart }) => {
     const inputRef = useRef<HTMLInputElement>(null);
 
     const handleAddToCart = useCallback(() => {
-        const quantity = Number(inputRef.current?.value.trim());
+        if (!inputRef.current) return;
+
+        const quantity = Number(inputRef.current.value.trim());
 
         if (!isQuantityValid(quantity)) return;
 
         onAddToCart({ product, quantity });
+        inputRef.current.value = '';
     }, [onAddToCart, product]);
 
     return (
