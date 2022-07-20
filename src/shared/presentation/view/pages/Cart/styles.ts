@@ -47,3 +47,12 @@ export const ListFooter = styled.footer`
         }
     `}
 `;
+
+export const FinishOrderContainer = styled.div`
+    ${({ theme }) => css`
+        display: flex;
+        background-color: ${theme.palette.gray['0']};
+        border-radius: ${theme.layout.borderRadius.md};
+        padding: ${theme.layout.spacing(2)};
+    `}
+`;
