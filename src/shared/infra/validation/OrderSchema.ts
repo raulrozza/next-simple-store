@@ -1,9 +1,14 @@
-import * as Yup from 'yup';
+import * as z from 'zod';
 
-export const OrderSchema = Yup.object().shape({
-    customer: Yup.string().required('Please select a customer'),
-    installments: Yup.number()
-        .required('Please select the number of installments')
-        .min(0, 'Maximum installments must be greater than 0')
-        .typeError('The installments must be a number'),
+export const OrderSchema = z.object({
+    customerId: z.string(),
+    installments: z
+        .number()
+        .min(0, 'Maximum installments must be greater than 0'),
+    products: z.array(
+        z.object({
+            productId: z.string(),
+            quantity: z.number().min(1, 'Quantity must be greater than 0'),
+        }),
+    ),
 });
