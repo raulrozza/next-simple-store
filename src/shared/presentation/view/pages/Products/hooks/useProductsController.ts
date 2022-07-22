@@ -1,31 +1,33 @@
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import { IProduct } from '@/shared/domain/entities/Product';
-import makeGetProducts from '@/shared/domain/useCases/factories/makeGetProducts';
 import { useToastProvider } from '@/shared/presentation/contexts';
+import { useQuery } from '@/shared/presentation/hooks';
 
 export default function useProductsController() {
-    const [products, setProducts] = useState<IProduct[]>([]);
+    const [query, setQuery] = useState<string | undefined>(undefined);
+    const { data, error } = useQuery(['products.getAll', { query }]);
+    const previousError = useRef<string | null>(null);
 
-    const getUseCase = useMemo(() => makeGetProducts(), []);
+    const [products, setProducts] = useState<IProduct[]>([]);
 
     const toast = useToastProvider();
 
-    const getProducts = useCallback(
-        async (params: { query?: string } = {}) => {
-            try {
-                const products = await getUseCase.execute(params);
-                setProducts(products);
-            } catch (error: any) {
-                toast.error(error.message);
-            }
-        },
-        [getUseCase, toast],
-    );
+    useEffect(() => {
+        if (data) setProducts(data);
+    }, [data]);
 
     useEffect(() => {
-        getProducts();
-    }, [getProducts]);
+        if (!error) return;
+
+        if (error.message === previousError.current) return;
+
+        toast.error(error.message);
+        previousError.current = error.message;
+    }, [error, toast]);
+
+    const getProducts = (params?: { query?: string }) =>
+        setQuery(params?.query);
 
     return { getProducts, products };
 }

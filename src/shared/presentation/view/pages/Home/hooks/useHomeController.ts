@@ -1,25 +1,29 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import { IProduct } from '@/shared/domain/entities/Product';
-import makeGetProducts from '@/shared/domain/useCases/factories/makeGetProducts';
 import { useToastProvider } from '@/shared/presentation/contexts';
+import { useQuery } from '@/shared/presentation/hooks';
 
 export default function useHomeController() {
+    const { data, error } = useQuery(['products.getAll', { query: undefined }]);
+    const previousError = useRef<string | null>(null);
+
     const [products, setProducts] = useState<IProduct[]>([]);
 
-    const getUseCase = useMemo(() => makeGetProducts(), []);
     const toast = useToastProvider();
 
     useEffect(() => {
-        getUseCase
-            .execute()
-            .then(products => {
-                setProducts(products);
-            })
-            .catch(error => {
-                toast.error(error.message);
-            });
-    }, [getUseCase, toast]);
+        if (data) setProducts(data);
+    }, [data]);
+
+    useEffect(() => {
+        if (!error) return;
+
+        if (error.message === previousError.current) return;
+
+        toast.error(error.message);
+        previousError.current = error.message;
+    }, [error, toast]);
 
     return { products };
 }

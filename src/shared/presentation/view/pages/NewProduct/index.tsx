@@ -24,7 +24,14 @@ const NewProduct: FC = () => {
 
             <Formik
                 initialValues={INITIAL_VALUES}
-                onSubmit={createProduct}
+                onSubmit={values =>
+                    createProduct({
+                        name: values.name,
+                        description: values.description,
+                        price: Number(values.price),
+                        slug: values.slug,
+                    })
+                }
                 validationSchema={ProductSchema}
             >
                 <EntityForm
