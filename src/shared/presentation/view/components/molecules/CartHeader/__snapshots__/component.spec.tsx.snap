@@ -22,7 +22,6 @@ Object {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  font-size: 1.5rem;
 }
 
 .c1 strong {
@@ -46,7 +45,7 @@ Object {
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 50%;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
 }
 
 .c0 {
@@ -115,7 +114,6 @@ Object {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  font-size: 1.5rem;
 }
 
 .c1 strong {
@@ -139,7 +137,7 @@ Object {
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 50%;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
 }
 
 .c0 {

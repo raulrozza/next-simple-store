@@ -29,7 +29,7 @@ describe('FieldFactory', () => {
 
         expect(screen.getByPlaceholderText('Large text')).toBeInTheDocument();
         expect(screen.getByPlaceholderText('Text')).toBeInTheDocument();
-        expect(screen.getByPlaceholderText('Select')).toBeInTheDocument();
+        expect(screen.getByText('Select')).toBeInTheDocument();
         expect(view).toMatchSnapshot();
     });
 

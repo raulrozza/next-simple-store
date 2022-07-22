@@ -32,16 +32,16 @@ Object {
   overflow: hidden;
   height: 23rem;
   color: #FFFFFF;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.25rem;
 }
 
 .c0 strong {
   font-family: 'Open Sans',sans-serif;
-  margin: 0.25rem 0.25rem 0.5rem;
+  font-size: 1.5rem;
+  margin: 0.25rem;
 }
 
 .c0 .price {
-  font-size: 1.5rem;
   margin: 0rem 0.25rem;
 }
 
@@ -59,11 +59,11 @@ Object {
   -ms-flex-align: center;
   align-items: center;
   gap: 0.25rem;
-  margin: 0.5rem;
+  margin: 0.25rem;
 }
 
 .c1 label {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
 }
 
 .c1 input {
@@ -73,7 +73,7 @@ Object {
   display: flex;
   width: 100%;
   outline: none;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
 }
 
 <body>
@@ -170,16 +170,16 @@ Object {
   overflow: hidden;
   height: 23rem;
   color: #FFFFFF;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.25rem;
 }
 
 .c0 strong {
   font-family: 'Open Sans',sans-serif;
-  margin: 0.25rem 0.25rem 0.5rem;
+  font-size: 1.5rem;
+  margin: 0.25rem;
 }
 
 .c0 .price {
-  font-size: 1.5rem;
   margin: 0rem 0.25rem;
 }
 
@@ -197,11 +197,11 @@ Object {
   -ms-flex-align: center;
   align-items: center;
   gap: 0.25rem;
-  margin: 0.5rem;
+  margin: 0.25rem;
 }
 
 .c1 label {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
 }
 
 .c1 input {
@@ -211,7 +211,7 @@ Object {
   display: flex;
   width: 100%;
   outline: none;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
 }
 
 <div>

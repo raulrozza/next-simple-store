@@ -87,7 +87,7 @@ const Cart: FC = () => {
                                 <Spacing size={2} />
 
                                 <Button variant="primary" onClick={clear}>
-                                    Clear all items
+                                    Remove all items
                                 </Button>
                             </ListFooter>
                         </List>
@@ -101,29 +101,35 @@ const Cart: FC = () => {
 
                     <FormikProvider value={formik}>
                         <FinishOrderContainer>
-                            <Form
-                                fields={[
-                                    {
-                                        type: 'select',
-                                        name: 'customer',
-                                        placeholder: 'Select a customer',
-                                        options: customers.map(customer => ({
-                                            label: customer.name,
-                                            value: customer.id,
-                                        })),
-                                    },
-                                    {
-                                        type: 'select',
-                                        name: 'installments',
-                                        placeholder: 'Number of installments',
-                                        options: installmentOptions,
-                                        disabled: !installmentOptions.length,
-                                    },
-                                ]}
-                                button={{
-                                    text: 'Submit order',
-                                }}
-                            />
+                            <div>
+                                <Form
+                                    fields={[
+                                        {
+                                            type: 'select',
+                                            name: 'customer',
+                                            placeholder: 'Select a customer',
+                                            options: customers.map(
+                                                customer => ({
+                                                    label: customer.name,
+                                                    value: customer.id,
+                                                }),
+                                            ),
+                                        },
+                                        {
+                                            type: 'select',
+                                            name: 'installments',
+                                            placeholder:
+                                                'Number of installments',
+                                            options: installmentOptions,
+                                            disabled:
+                                                !installmentOptions.length,
+                                        },
+                                    ]}
+                                    button={{
+                                        text: 'Submit order',
+                                    }}
+                                />
+                            </div>
 
                             <div>opa </div>
                         </FinishOrderContainer>

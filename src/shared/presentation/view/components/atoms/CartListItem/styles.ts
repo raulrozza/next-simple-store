@@ -21,11 +21,11 @@ export const Item = styled.li`
             display: flex;
             flex-direction: column;
             align-items: center;
-            font-size: ${theme.typography.sizes.xs};
+            font-size: ${theme.typography.sizes.sm};
 
             input {
                 outline: none;
-                font-size: ${theme.typography.sizes.xs};
+                font-size: ${theme.typography.sizes.sm};
                 max-width: ${theme.layout.size(4)};
             }
         }

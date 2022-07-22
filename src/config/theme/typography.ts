@@ -15,11 +15,11 @@ interface ITypography {
 
 const typography: ITypography = {
     sizes: {
-        xs: '0.75rem',
-        sm: '1rem',
-        md: '1.5rem',
-        lg: '2rem',
-        xl: '4rem',
+        xs: '0.5rem',
+        sm: '0.7rem',
+        md: '1rem',
+        lg: '1.5rem',
+        xl: '2rem',
     },
     family: {
         text: "'Roboto', sans-serif",

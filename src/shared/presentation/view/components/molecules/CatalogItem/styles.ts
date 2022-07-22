@@ -12,15 +12,15 @@ export const Item = styled.li`
         overflow: hidden;
         height: ${theme.layout.size(23)};
         color: ${theme.palette.gray['0']};
-        padding-bottom: ${theme.layout.spacing(2)};
+        padding-bottom: ${theme.layout.spacing(1)};
 
         strong {
             font-family: ${theme.typography.family.title};
-            margin: ${theme.layout.spacing(1, 1, 2)};
+            font-size: ${theme.typography.sizes.lg};
+            margin: ${theme.layout.spacing(1)};
         }
 
         .price {
-            font-size: ${theme.typography.sizes.md};
             margin: ${theme.layout.spacing(0, 1)};
         }
 
@@ -35,17 +35,17 @@ export const QuantityRow = styled.div`
         display: flex;
         align-items: center;
         gap: ${theme.layout.spacing(1)};
-        margin: ${theme.layout.spacing(2)};
+        margin: ${theme.layout.spacing(1)};
 
         label {
-            font-size: ${theme.typography.sizes.xs};
+            font-size: ${theme.typography.sizes.sm};
         }
 
         input {
             display: flex;
             width: 100%;
             outline: none;
-            font-size: ${theme.typography.sizes.xs};
+            font-size: ${theme.typography.sizes.sm};
         }
     `}
 `;

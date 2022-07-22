@@ -12,7 +12,7 @@ export const MenuButton = styled.button`
 `;
 
 export const MenuIcon = styled(BiMenuAltLeft)`
-    font-size: ${({ theme }) => theme.typography.sizes.lg};
+    font-size: ${({ theme }) => theme.typography.sizes.xl};
     color: ${({ theme }) => theme.palette.gray['700']};
 `;
 

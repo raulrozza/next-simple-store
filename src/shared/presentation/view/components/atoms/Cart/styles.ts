@@ -15,8 +15,6 @@ export const Trigger = styled(HoverCardTrigger)`
         justify-content: center;
         align-items: center;
 
-        font-size: ${theme.typography.sizes.md};
-
         strong {
             display: flex;
             justify-content: center;
@@ -31,7 +29,7 @@ export const Trigger = styled(HoverCardTrigger)`
             height: ${theme.layout.size(1.5)};
 
             border-radius: 50%;
-            font-size: ${theme.typography.sizes.xs};
+            font-size: ${theme.typography.sizes.sm};
         }
     `}
 `;
@@ -45,20 +43,20 @@ export const Content = styled(HoverCardContent)`
 
         background-color: ${theme.palette.gray['0']};
         border: 1px solid ${theme.palette.secondary['600']};
-        border-radius: ${theme.layout.borderRadius.md};
+        border-radius: ${theme.layout.borderRadius.sm};
         box-shadow: 0 0 10px 3px #00000029;
 
         padding: ${theme.layout.spacing(2)};
 
-        font-size: ${theme.typography.sizes.xs};
+        font-size: ${theme.typography.sizes.sm};
 
         strong {
             color: ${theme.palette.primary['1000']};
         }
 
         a {
-            font-size: ${theme.typography.sizes.xs};
             color: ${theme.palette.secondary['1000']};
+            font-size: ${theme.typography.sizes.sm};
 
             &:hover {
                 text-decoration: underline;

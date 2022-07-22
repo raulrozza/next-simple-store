@@ -25,7 +25,7 @@ const Home: FC = () => {
 
                     <Spacing size={4} />
 
-                    {!products.length && <h3>There are no products yet.</h3>}
+                    {!products.length && <p>There are no products yet.</p>}
 
                     <Grid>
                         {products.map(product => (

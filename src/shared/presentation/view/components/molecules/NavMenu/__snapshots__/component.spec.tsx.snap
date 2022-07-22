@@ -18,7 +18,7 @@ Object {
   color: #506C6D;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-family: 'Open Sans',sans-serif;
 }
 
@@ -41,7 +41,7 @@ Object {
   color: #506C6D;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-family: 'Open Sans',sans-serif;
   color: #3D879D;
 }
@@ -183,7 +183,7 @@ Object {
   color: #506C6D;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-family: 'Open Sans',sans-serif;
 }
 
@@ -206,7 +206,7 @@ Object {
   color: #506C6D;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-family: 'Open Sans',sans-serif;
   color: #3D879D;
 }

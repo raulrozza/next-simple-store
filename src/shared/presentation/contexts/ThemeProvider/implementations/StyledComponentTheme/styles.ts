@@ -20,7 +20,7 @@ ${({ theme }) => css`
     a,
     button {
         font-family: ${theme.typography.family.text};
-        font-size: ${theme.typography.sizes.sm};
+        font-size: ${theme.typography.sizes.md};
         color: ${theme.palette.gray['1000']};
     }
 
@@ -47,6 +47,30 @@ ${({ theme }) => css`
     h5,
     h6 {
         font-family: ${theme.typography.family.title};
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+    }
+
+    h5 {
+        font-size: 0.8rem;
+    }
+
+    h6 {
+        font-size: 0.7rem;
     }
 `}
 `;

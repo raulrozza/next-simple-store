@@ -54,5 +54,12 @@ export const FinishOrderContainer = styled.div`
         background-color: ${theme.palette.gray['0']};
         border-radius: ${theme.layout.borderRadius.md};
         padding: ${theme.layout.spacing(2)};
+
+        div {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            align-items: center;
+        }
     `}
 `;

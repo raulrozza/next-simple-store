@@ -18,6 +18,21 @@ Object {
   border-color: #8CCFDE;
 }
 
+.c2 {
+  background-color: #FFFFFF;
+  border: 2px solid #E6EAEA;
+  outline: none;
+  border-radius: 0.25rem;
+  width: 100%;
+  padding: 0.5rem;
+  -webkit-transition: outline 0.2s,border 0.2s;
+  transition: outline 0.2s,border 0.2s;
+}
+
+.c2:focus {
+  border-color: #8CCFDE;
+}
+
 .c0 {
   background-color: #FFFFFF;
   border: 2px solid #E6EAEA;
@@ -52,6 +67,18 @@ Object {
           value=""
         />
       </div>
+      <div>
+        <select
+          class="c2"
+          name="select"
+        >
+          <option
+            value=""
+          >
+            Select
+          </option>
+        </select>
+      </div>
     </div>
   </body>,
   "container": .c1 {
@@ -66,6 +93,21 @@ Object {
 }
 
 .c1:focus {
+  border-color: #8CCFDE;
+}
+
+.c2 {
+  background-color: #FFFFFF;
+  border: 2px solid #E6EAEA;
+  outline: none;
+  border-radius: 0.25rem;
+  width: 100%;
+  padding: 0.5rem;
+  -webkit-transition: outline 0.2s,border 0.2s;
+  transition: outline 0.2s,border 0.2s;
+}
+
+.c2:focus {
   border-color: #8CCFDE;
 }
 
@@ -101,6 +143,18 @@ Object {
         placeholder="Text"
         value=""
       />
+    </div>
+    <div>
+      <select
+        class="c2"
+        name="select"
+      >
+        <option
+          value=""
+        >
+          Select
+        </option>
+      </select>
     </div>
   </div>,
   "debug": [Function],
