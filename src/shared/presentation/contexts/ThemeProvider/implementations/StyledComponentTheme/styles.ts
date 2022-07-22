@@ -24,6 +24,11 @@ ${({ theme }) => css`
         color: ${theme.palette.gray['1000']};
     }
 
+    select {
+        font-family: ${theme.typography.family.text};
+        font-size: ${theme.typography.sizes.md};
+    }
+
     body {
         background-color: ${theme.palette.gray['100']};
         min-height: 100vh;

@@ -1,3 +1,4 @@
+export { default as CartFooter } from './CartFooter';
 export { default as CartHeader } from './CartHeader';
 export { default as CatalogItem } from './CatalogItem';
 export { default as CustomerInfoItem } from './CustomerInfoItem';

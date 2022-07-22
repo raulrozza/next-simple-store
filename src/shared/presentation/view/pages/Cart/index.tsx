@@ -8,21 +8,25 @@ import {
     useCartValue,
 } from '@/shared/presentation/contexts';
 import {
-    Button,
     CartListItem,
     Spacing,
 } from '@/shared/presentation/view/components/atoms';
-import { Form } from '@/shared/presentation/view/components/molecules';
+import {
+    CartFooter,
+    Form,
+} from '@/shared/presentation/view/components/molecules';
 import { Menu } from '@/shared/presentation/view/components/organisms';
 
 import { useCartController } from './hooks';
-import {
-    Container,
-    Content,
-    FinishOrderContainer,
-    List,
-    ListFooter,
-} from './styles';
+import { Container, Content, FinishOrderContainer, List } from './styles';
+
+const DISCOUNT = 0.1;
+
+const calculateDiscountedTotal = (total: number, installments: number) => {
+    if (installments > 1) return total;
+
+    return total * (1 - DISCOUNT);
+};
 
 const Cart: FC = () => {
     const cart = useCartValue();
@@ -74,22 +78,17 @@ const Cart: FC = () => {
                                 />
                             ))}
 
-                            <ListFooter>
-                                <div>
-                                    <p>
-                                        You have {meta.quantity} products in
-                                        your cart.
-                                    </p>
-
-                                    <p>Total: ${meta.total.toFixed(2)}</p>
-                                </div>
-
-                                <Spacing size={2} />
-
-                                <Button variant="primary" onClick={clear}>
-                                    Remove all items
-                                </Button>
-                            </ListFooter>
+                            <CartFooter
+                                bottomLabels={[
+                                    ` You have ${meta.quantity} products in
+                                    your cart.`,
+                                    `Total: $${meta.total.toFixed(2)}`,
+                                ]}
+                                button={{
+                                    text: 'Remove all items',
+                                    onClick: clear,
+                                }}
+                            />
                         </List>
                     ) : (
                         <p>No items added yet.</p>
@@ -131,7 +130,17 @@ const Cart: FC = () => {
                                 />
                             </div>
 
-                            <div>opa </div>
+                            <div>
+                                <h3>Order total</h3>
+
+                                <p>
+                                    $
+                                    {calculateDiscountedTotal(
+                                        meta.total,
+                                        formik.values.installments,
+                                    ).toFixed(2)}
+                                </p>
+                            </div>
                         </FinishOrderContainer>
                     </FormikProvider>
                 </Content>
