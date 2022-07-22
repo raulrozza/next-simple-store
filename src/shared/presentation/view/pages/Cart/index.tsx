@@ -22,12 +22,6 @@ import { Container, Content, FinishOrderContainer } from './styles';
 
 const DISCOUNT = 0.1;
 
-const calculateDiscountedTotal = (total: number, installments: number) => {
-    if (installments > 1) return total;
-
-    return total * (1 - DISCOUNT);
-};
-
 const Cart: FC = () => {
     const cart = useCartValue();
     const meta = useCartMetaValue();
@@ -41,23 +35,39 @@ const Cart: FC = () => {
         onSubmit: console.log,
     });
 
-    const installmentOptions = useMemo(() => {
+    const selectedCustomer = useMemo(() => {
         const selectedCustomer = formik.values.customer;
 
-        if (!selectedCustomer) return [];
+        if (!selectedCustomer) return undefined;
 
         const customer = customers.find(({ id }) => id === selectedCustomer);
 
-        if (!customer) return [];
+        return customer;
+    }, [customers, formik.values.customer]);
+
+    const discountedTotal = useMemo(() => {
+        if (formik.values.installments > 1) return meta.total;
+
+        return meta.total * (1 - DISCOUNT);
+    }, [formik.values.installments, meta.total]);
+
+    const isValidTotal = useMemo(() => {
+        if (!selectedCustomer) return false;
+
+        return discountedTotal <= selectedCustomer.creditLimit;
+    }, [discountedTotal, selectedCustomer]);
+
+    const installmentOptions = useMemo(() => {
+        if (!selectedCustomer) return [];
 
         return Array.from(
-            { length: customer.installmentLimit },
+            { length: selectedCustomer.installmentLimit },
             (_, index) => ({
                 value: index + 1,
                 label: `${index + 1}x`,
             }),
         );
-    }, [customers, formik.values.customer]);
+    }, [selectedCustomer]);
 
     return (
         <section>
@@ -121,13 +131,17 @@ const Cart: FC = () => {
                                 />
                             </div>
 
-                            <OrderTotalDisplay
-                                title="Order total"
-                                totalText={`$${calculateDiscountedTotal(
-                                    meta.total,
-                                    formik.values.installments,
-                                ).toFixed(2)}`}
-                            />
+                            {selectedCustomer ? (
+                                <OrderTotalDisplay
+                                    title="Order total"
+                                    totalText={`$${discountedTotal.toFixed(2)}`}
+                                    isTotalValid={isValidTotal}
+                                />
+                            ) : (
+                                <div>
+                                    <p>Select a customer to see the total</p>
+                                </div>
+                            )}
                         </FinishOrderContainer>
                     </FormikProvider>
                 </Content>
