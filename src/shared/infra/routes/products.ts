@@ -1,8 +1,9 @@
 import * as trpc from '@trpc/server';
-import * as yup from 'yup';
+import * as z from 'zod';
 
 import makeCreateProduct from '@/shared/domain/useCases/factories/makeCreateProduct';
 import makeGetProducts from '@/shared/domain/useCases/factories/makeGetProducts';
+import makeGetSingleProduct from '@/shared/domain/useCases/factories/makeGetSingleProduct';
 import makeUpdateProduct from '@/shared/domain/useCases/factories/makeUpdateProduct';
 import {
     ProductCreationSchema,
@@ -12,13 +13,23 @@ import {
 export const productRoutes = trpc
     .router()
     .query('getAll', {
-        input: yup.object({
-            query: yup.string().optional(),
+        input: z.object({
+            query: z.string().optional(),
         }),
         resolve({ input }) {
             const getUseCase = makeGetProducts();
 
             return getUseCase.execute(input);
+        },
+    })
+    .query('getOne', {
+        input: z.object({
+            id: z.string(),
+        }),
+        resolve({ input }) {
+            const findUseCase = makeGetSingleProduct();
+
+            return findUseCase.execute(input.id);
         },
     })
     .mutation('create', {

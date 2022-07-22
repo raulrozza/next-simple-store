@@ -1,11 +1,9 @@
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useRef } from 'react';
 
 import { useRouter } from 'next/router';
 
-import { IProduct } from '@/shared/domain/entities/Product';
-import makeGetSingleProduct from '@/shared/domain/useCases/factories/makeGetSingleProduct';
-import makeUpdateProduct from '@/shared/domain/useCases/factories/makeUpdateProduct';
 import { useToastProvider } from '@/shared/presentation/contexts';
+import { useMutation, useQuery } from '@/shared/presentation/hooks';
 
 type FormParams = {
     name: string;
@@ -15,42 +13,42 @@ type FormParams = {
 };
 
 export default function useEditProductController() {
-    const [product, setProduct] = useState<IProduct | undefined>(undefined);
     const router = useRouter();
     const toast = useToastProvider();
 
-    const getUseCase = useMemo(() => makeGetSingleProduct(), []);
-    const updateUseCase = useMemo(() => makeUpdateProduct(), []);
+    const previousError = useRef<string | null>(null);
+    const { data: product } = useQuery(
+        ['products.getOne', { id: String(router.query.id) }],
+        {
+            onError: error => {
+                if (error.message === previousError.current) return;
 
-    useEffect(() => {
-        getUseCase
-            .execute(String(router.query.id))
-            .then(product => {
-                if (!product) return router.back();
-                setProduct(product);
-            })
-            .catch(error => {
                 toast.error(error.message);
-            });
-    }, [getUseCase, router, toast]);
+                previousError.current = error.message;
+            },
+        },
+    );
+    const { mutate } = useMutation(['products.update'], {
+        onSuccess: () => router.back(),
+        onError: error => {
+            if (error.message === previousError.current) return;
+
+            toast.error(error.message);
+            previousError.current = error.message;
+        },
+    });
 
     const updateProduct = useCallback(
         async (params: FormParams) => {
-            try {
-                await updateUseCase.execute({
-                    id: String(router.query.id),
-                    name: params.name,
-                    description: params.description,
-                    price: Number(params.price),
-                    slug: params.slug,
-                });
-
-                router.back();
-            } catch (error: any) {
-                toast.error(error.message);
-            }
+            mutate({
+                id: String(router.query.id),
+                name: params.name,
+                description: params.description,
+                price: Number(params.price),
+                slug: params.slug,
+            });
         },
-        [updateUseCase, router, toast],
+        [mutate, router.query.id],
     );
 
     return { product, updateProduct };
