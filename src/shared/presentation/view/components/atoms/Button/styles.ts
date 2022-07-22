@@ -2,36 +2,58 @@ import styled, { css } from 'styled-components';
 
 interface StyledButtonProps {
     variant?: 'primary' | 'secondary';
+    disabled?: boolean;
 }
 
 const VARIANT_STYLES = {
-    primary: css`
-        ${({ theme }) => css`
+    primary: css<StyledButtonProps>`
+        ${({ theme, disabled }) => css`
             background-color: ${theme.palette.primary['700']};
             color: ${theme.palette.gray['0']};
 
-            &:hover {
-                background-color: ${theme.palette.primary['600']};
-            }
+            ${disabled
+                ? css`
+                      opacity: 0.5;
+                      cursor: default;
+                  `
+                : css`
+                      &:hover {
+                          background-color: ${theme.palette.primary['600']};
+                      }
+                  `}
         `}
     `,
-    secondary: css`
-        ${({ theme }) => css`
+    secondary: css<StyledButtonProps>`
+        ${({ theme, disabled }) => css`
             background-color: ${theme.palette.secondary['700']};
             color: ${theme.palette.gray['0']};
 
-            &:hover {
-                background-color: ${theme.palette.secondary['600']};
-            }
+            ${disabled
+                ? css`
+                      opacity: 0.5;
+                      cursor: default;
+                  `
+                : css`
+                      &:hover {
+                          background-color: ${theme.palette.secondary['600']};
+                      }
+                  `}
         `}
     `,
-    default: css`
-        ${({ theme }) => css`
+    default: css<StyledButtonProps>`
+        ${({ theme, disabled }) => css`
             color: ${theme.palette.gray['900']};
 
-            &:hover {
-                background-color: ${theme.palette.gray['200']};
-            }
+            ${disabled
+                ? css`
+                      opacity: 0.5;
+                      cursor: default;
+                  `
+                : css`
+                      &:hover {
+                          background-color: ${theme.palette.gray['200']};
+                      }
+                  `}
         `}
     `,
 };

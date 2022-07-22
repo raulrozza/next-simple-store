@@ -2,11 +2,13 @@ import { FC } from 'react';
 
 import { RecoilRoot } from 'recoil';
 
-import { ThemeProvider } from '@/shared/presentation/contexts';
+import { ThemeProvider, ToastProvider } from '@/shared/presentation/contexts';
 
 const AppContainer: FC = ({ children }) => (
     <RecoilRoot>
-        <ThemeProvider>{children}</ThemeProvider>
+        <ToastProvider>
+            <ThemeProvider>{children}</ThemeProvider>
+        </ToastProvider>
     </RecoilRoot>
 );
 

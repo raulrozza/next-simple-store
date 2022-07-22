@@ -140,6 +140,7 @@ const Cart: FC = () => {
                                     ]}
                                     button={{
                                         text: 'Submit order',
+                                        disabled: !cart.length,
                                     }}
                                 />
                             </div>

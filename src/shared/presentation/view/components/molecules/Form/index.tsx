@@ -13,6 +13,7 @@ interface FormProps {
     fields: IField[];
     button: {
         text: string;
+        disabled?: boolean;
     };
 }
 
@@ -26,7 +27,7 @@ const Form: FC<FormProps> = ({ fields, button }) => (
             </Fragment>
         ))}
 
-        <Button type="submit" variant="secondary">
+        <Button type="submit" variant="secondary" disabled={button.disabled}>
             {button.text}
         </Button>
     </FormikForm>

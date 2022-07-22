@@ -14,6 +14,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     variant?: 'primary' | 'secondary';
     icon?: keyof typeof ICONS;
     asAnchor?: boolean;
+    disabled?: boolean;
 }
 
 const Button: FC<ButtonProps> = ({ children, icon, asAnchor, ...props }) => {

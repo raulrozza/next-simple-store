@@ -6,7 +6,10 @@ import { ICreateOrderDTO } from '@/shared/domain/dtos/CreateOrderDTO';
 import { ICustomer } from '@/shared/domain/entities/Customer';
 import makeCreateOrder from '@/shared/domain/useCases/factories/makeCreateOrder';
 import makeGetCustomers from '@/shared/domain/useCases/factories/makeGetCustomers';
-import { useCartManager } from '@/shared/presentation/contexts';
+import {
+    useCartManager,
+    useToastProvider,
+} from '@/shared/presentation/contexts';
 
 export default function useCartController() {
     const [customers, setCustomers] = useState<ICustomer[]>([]);
@@ -16,12 +19,18 @@ export default function useCartController() {
 
     const cart = useCartManager();
     const router = useRouter();
+    const toast = useToastProvider();
 
     useEffect(() => {
-        getUseCase.execute().then(customers => {
-            setCustomers(customers);
-        });
-    }, [getUseCase]);
+        getUseCase
+            .execute()
+            .then(customers => {
+                setCustomers(customers);
+            })
+            .catch(error => {
+                toast.error(error.message);
+            });
+    }, [getUseCase, toast]);
 
     const createOrder = useCallback(
         async (params: ICreateOrderDTO) => {
@@ -31,10 +40,10 @@ export default function useCartController() {
                 cart.clear();
                 router.replace('/');
             } catch (error: any) {
-                alert(error.message);
+                toast.error(error.message);
             }
         },
-        [cart, createOrderUseCase, router],
+        [cart, createOrderUseCase, router, toast],
     );
 
     return { createOrder, customers };

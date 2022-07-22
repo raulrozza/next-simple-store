@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 import { IProduct } from '@/shared/domain/entities/Product';
 import makeGetSingleProduct from '@/shared/domain/useCases/factories/makeGetSingleProduct';
 import makeUpdateProduct from '@/shared/domain/useCases/factories/makeUpdateProduct';
+import { useToastProvider } from '@/shared/presentation/contexts';
 
 type FormParams = {
     name: string;
@@ -16,30 +17,40 @@ type FormParams = {
 export default function useEditProductController() {
     const [product, setProduct] = useState<IProduct | undefined>(undefined);
     const router = useRouter();
+    const toast = useToastProvider();
 
     const getUseCase = useMemo(() => makeGetSingleProduct(), []);
     const updateUseCase = useMemo(() => makeUpdateProduct(), []);
 
     useEffect(() => {
-        getUseCase.execute(String(router.query.id)).then(product => {
-            if (!product) return router.back();
-            setProduct(product);
-        });
-    }, [getUseCase, router]);
+        getUseCase
+            .execute(String(router.query.id))
+            .then(product => {
+                if (!product) return router.back();
+                setProduct(product);
+            })
+            .catch(error => {
+                toast.error(error.message);
+            });
+    }, [getUseCase, router, toast]);
 
     const updateProduct = useCallback(
         async (params: FormParams) => {
-            await updateUseCase.execute({
-                id: String(router.query.id),
-                name: params.name,
-                description: params.description,
-                price: Number(params.price),
-                slug: params.slug,
-            });
+            try {
+                await updateUseCase.execute({
+                    id: String(router.query.id),
+                    name: params.name,
+                    description: params.description,
+                    price: Number(params.price),
+                    slug: params.slug,
+                });
 
-            router.back();
+                router.back();
+            } catch (error: any) {
+                toast.error(error.message);
+            }
         },
-        [updateUseCase, router],
+        [updateUseCase, router, toast],
     );
 
     return { product, updateProduct };
