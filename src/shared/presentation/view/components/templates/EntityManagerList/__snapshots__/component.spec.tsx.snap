@@ -24,16 +24,12 @@ Object {
   background-color: #CDD5D5;
 }
 
-.c6 {
+.c5 {
   background-color: #FFFFFF;
   border-radius: 1rem;
 }
 
 .c4 {
-  margin-top: 0.5rem;
-}
-
-.c5 {
   margin-top: 0.25rem;
 }
 
@@ -62,7 +58,7 @@ Object {
   gap: 0.25rem;
 }
 
-.c7 {
+.c6 {
   overflow: hidden;
 }
 
@@ -86,20 +82,20 @@ Object {
           </div>
           <div
             class="c4"
-            size="2"
+            size="1"
           />
           <h1>
             Title
           </h1>
           <div
-            class="c5"
+            class="c4"
             size="1"
           />
           <p>
             There are no items yet.
           </p>
           <ul
-            class="c6 c7"
+            class="c5 c6"
           />
         </main>
       </section>
@@ -126,16 +122,12 @@ Object {
   background-color: #CDD5D5;
 }
 
-.c6 {
+.c5 {
   background-color: #FFFFFF;
   border-radius: 1rem;
 }
 
 .c4 {
-  margin-top: 0.5rem;
-}
-
-.c5 {
   margin-top: 0.25rem;
 }
 
@@ -164,7 +156,7 @@ Object {
   gap: 0.25rem;
 }
 
-.c7 {
+.c6 {
   overflow: hidden;
 }
 
@@ -187,20 +179,20 @@ Object {
         </div>
         <div
           class="c4"
-          size="2"
+          size="1"
         />
         <h1>
           Title
         </h1>
         <div
-          class="c5"
+          class="c4"
           size="1"
         />
         <p>
           There are no items yet.
         </p>
         <ul
-          class="c6 c7"
+          class="c5 c6"
         />
       </main>
     </section>
@@ -283,7 +275,7 @@ Object {
   background-color: #CDD5D5;
 }
 
-.c6 {
+.c7 {
   background-color: #FFFFFF;
   border-radius: 1rem;
 }
@@ -292,8 +284,23 @@ Object {
   margin-top: 0.5rem;
 }
 
-.c5 {
+.c6 {
   margin-top: 0.25rem;
+}
+
+.c5 {
+  background-color: #FFFFFF;
+  border: 2px solid #E6EAEA;
+  outline: none;
+  border-radius: 0.25rem;
+  width: 100%;
+  padding: 0.5rem;
+  -webkit-transition: outline 0.2s,border 0.2s;
+  transition: outline 0.2s,border 0.2s;
+}
+
+.c5:focus {
+  border-color: #8CCFDE;
 }
 
 .c0 {
@@ -321,7 +328,7 @@ Object {
   gap: 0.25rem;
 }
 
-.c7 {
+.c8 {
   overflow: hidden;
 }
 
@@ -347,15 +354,23 @@ Object {
             class="c4"
             size="2"
           />
+          <input
+            class="c5"
+            placeholder="Search"
+          />
+          <div
+            class="c6"
+            size="1"
+          />
           <h1>
             Title
           </h1>
           <div
-            class="c5"
+            class="c6"
             size="1"
           />
           <ul
-            class="c6 c7"
+            class="c7 c8"
           >
             <div>
               Slogan 1
@@ -389,7 +404,7 @@ Object {
   background-color: #CDD5D5;
 }
 
-.c6 {
+.c7 {
   background-color: #FFFFFF;
   border-radius: 1rem;
 }
@@ -398,7 +413,166 @@ Object {
   margin-top: 0.5rem;
 }
 
+.c6 {
+  margin-top: 0.25rem;
+}
+
 .c5 {
+  background-color: #FFFFFF;
+  border: 2px solid #E6EAEA;
+  outline: none;
+  border-radius: 0.25rem;
+  width: 100%;
+  padding: 0.5rem;
+  -webkit-transition: outline 0.2s,border 0.2s;
+  transition: outline 0.2s,border 0.2s;
+}
+
+.c5:focus {
+  border-color: #8CCFDE;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c1 {
+  width: 100%;
+  max-width: 50rem;
+  margin: 1rem;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+}
+
+.c8 {
+  overflow: hidden;
+}
+
+<div>
+    <section
+      class="c0"
+    >
+      <main
+        class="c1"
+      >
+        <div
+          class="c2"
+        >
+          <a
+            class="c3"
+            href="/add"
+          >
+            Add
+          </a>
+        </div>
+        <div
+          class="c4"
+          size="2"
+        />
+        <input
+          class="c5"
+          placeholder="Search"
+        />
+        <div
+          class="c6"
+          size="1"
+        />
+        <h1>
+          Title
+        </h1>
+        <div
+          class="c6"
+          size="1"
+        />
+        <ul
+          class="c7 c8"
+        >
+          <div>
+            Slogan 1
+          </div>
+          <div>
+            Slogan 2
+          </div>
+        </ul>
+      </main>
+    </section>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`EntityManagerList should render the component without displaying the non present elements 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": .c4 {
+  background-color: #FFFFFF;
+  border-radius: 1rem;
+}
+
+.c3 {
   margin-top: 0.25rem;
 }
 
@@ -427,7 +601,81 @@ Object {
   gap: 0.25rem;
 }
 
-.c7 {
+.c5 {
+  overflow: hidden;
+}
+
+<body>
+    <div>
+      <section
+        class="c0"
+      >
+        <main
+          class="c1"
+        >
+          <div
+            class="c2"
+          />
+          <div
+            class="c3"
+            size="1"
+          />
+          <h1>
+            Title
+          </h1>
+          <div
+            class="c3"
+            size="1"
+          />
+          <ul
+            class="c4 c5"
+          >
+            <div>
+              Slogan 1
+            </div>
+            <div>
+              Slogan 2
+            </div>
+          </ul>
+        </main>
+      </section>
+    </div>
+  </body>,
+  "container": .c4 {
+  background-color: #FFFFFF;
+  border-radius: 1rem;
+}
+
+.c3 {
+  margin-top: 0.25rem;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c1 {
+  width: 100%;
+  max-width: 50rem;
+  margin: 1rem;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+}
+
+.c5 {
   overflow: hidden;
 }
 
@@ -440,27 +688,20 @@ Object {
       >
         <div
           class="c2"
-        >
-          <a
-            class="c3"
-            href="/add"
-          >
-            Add
-          </a>
-        </div>
+        />
         <div
-          class="c4"
-          size="2"
+          class="c3"
+          size="1"
         />
         <h1>
           Title
         </h1>
         <div
-          class="c5"
+          class="c3"
           size="1"
         />
         <ul
-          class="c6 c7"
+          class="c4 c5"
         >
           <div>
             Slogan 1

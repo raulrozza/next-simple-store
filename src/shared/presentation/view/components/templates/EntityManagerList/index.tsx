@@ -7,7 +7,11 @@ import {
 
 import Link from 'next/link';
 
-import { Button, Spacing } from '@/shared/presentation/view/components/atoms';
+import {
+    Button,
+    SearchInput,
+    Spacing,
+} from '@/shared/presentation/view/components/atoms';
 
 import { ButtonPanel, Container, Content, List } from './styles';
 
@@ -24,6 +28,10 @@ interface EntityManagerListProps<T> {
     emptyText: string;
     items: T[];
     renderItem: FC<{ item: T }>;
+    search?: {
+        onSearch: (value: string) => void;
+        placeholder: string;
+    };
 }
 
 function EntityManagerList<T extends { id: string }>({
@@ -31,6 +39,7 @@ function EntityManagerList<T extends { id: string }>({
     title,
     items,
     emptyText,
+    search,
     renderItem: RenderItem,
 }: PropsWithChildren<EntityManagerListProps<T>>): ReactElement {
     return (
@@ -50,7 +59,18 @@ function EntityManagerList<T extends { id: string }>({
                     ))}
                 </ButtonPanel>
 
-                <Spacing size={2} />
+                {search && (
+                    <>
+                        <Spacing size={2} />
+
+                        <SearchInput
+                            onSubmit={search.onSearch}
+                            placeholder={search.placeholder}
+                        />
+                    </>
+                )}
+
+                <Spacing size={1} />
 
                 <h1>{title}</h1>
 

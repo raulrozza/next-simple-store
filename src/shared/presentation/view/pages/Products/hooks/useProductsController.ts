@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 
 import { IProduct } from '@/shared/domain/entities/Product';
 import makeGetProducts from '@/shared/domain/useCases/factories/makeGetProducts';
@@ -8,11 +8,17 @@ export default function useProductsController() {
 
     const getUseCase = useMemo(() => makeGetProducts(), []);
 
-    useEffect(() => {
-        getUseCase.execute().then(products => {
+    const getProducts = useCallback(
+        async (params: { query?: string } = {}) => {
+            const products = await getUseCase.execute(params);
             setProducts(products);
-        });
-    }, [getUseCase]);
+        },
+        [getUseCase],
+    );
 
-    return { products };
+    useEffect(() => {
+        getProducts();
+    }, [getProducts]);
+
+    return { getProducts, products };
 }

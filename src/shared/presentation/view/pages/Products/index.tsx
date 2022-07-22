@@ -7,7 +7,7 @@ import { EntityManagerList } from '@/shared/presentation/view/components/templat
 import { useProductsController } from './hooks';
 
 const Products: FC = () => {
-    const { products } = useProductsController();
+    const { products, getProducts } = useProductsController();
 
     return (
         <section>
@@ -25,6 +25,10 @@ const Products: FC = () => {
                 title="Products"
                 items={products}
                 emptyText="There are no products yet."
+                search={{
+                    onSearch: text => getProducts({ query: text }),
+                    placeholder: 'Search by name or slug',
+                }}
                 renderItem={({ item }) => <ProductInfoItem product={item} />}
             />
         </section>

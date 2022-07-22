@@ -1,0 +1,102 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchInput should render the input correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": .c0 {
+  background-color: #FFFFFF;
+  border: 2px solid #E6EAEA;
+  outline: none;
+  border-radius: 0.25rem;
+  width: 100%;
+  padding: 0.5rem;
+  -webkit-transition: outline 0.2s,border 0.2s;
+  transition: outline 0.2s,border 0.2s;
+}
+
+.c0:focus {
+  border-color: #8CCFDE;
+}
+
+<body>
+    <div>
+      <input
+        class="c0"
+        placeholder="My input"
+      />
+    </div>
+  </body>,
+  "container": .c0 {
+  background-color: #FFFFFF;
+  border: 2px solid #E6EAEA;
+  outline: none;
+  border-radius: 0.25rem;
+  width: 100%;
+  padding: 0.5rem;
+  -webkit-transition: outline 0.2s,border 0.2s;
+  transition: outline 0.2s,border 0.2s;
+}
+
+.c0:focus {
+  border-color: #8CCFDE;
+}
+
+<div>
+    <input
+      class="c0"
+      placeholder="My input"
+    />
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

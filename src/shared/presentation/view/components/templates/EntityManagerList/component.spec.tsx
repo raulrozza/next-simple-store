@@ -25,6 +25,10 @@ describe('EntityManagerList', () => {
                         slogan: 'Slogan 2',
                     },
                 ]}
+                search={{
+                    onSearch: jest.fn(),
+                    placeholder: 'Search',
+                }}
                 renderItem={({ item }) => <div>{item.slogan}</div>}
                 title="Title"
             />,
@@ -34,7 +38,39 @@ describe('EntityManagerList', () => {
         );
 
         expect(screen.getByText('Title')).toBeInTheDocument();
+        expect(screen.getByPlaceholderText('Search')).toBeInTheDocument();
         expect(screen.getByText('Add')).toBeInTheDocument();
+        expect(
+            screen.queryByText('There are no items yet.'),
+        ).not.toBeInTheDocument();
+        expect(screen.getByText('Slogan 1')).toBeInTheDocument();
+        expect(screen.getByText('Slogan 2')).toBeInTheDocument();
+        expect(view).toMatchSnapshot();
+    });
+
+    it('should render the component without displaying the non present elements', () => {
+        const view = render(
+            <EntityManagerList
+                emptyText="There are no items yet."
+                items={[
+                    {
+                        id: 'dshf9sdghsd',
+                        slogan: 'Slogan 1',
+                    },
+                    {
+                        id: 'dshf9gfgfdgdhsd',
+                        slogan: 'Slogan 2',
+                    },
+                ]}
+                renderItem={({ item }) => <div>{item.slogan}</div>}
+                title="Title"
+            />,
+            {
+                wrapper: ThemeProvider,
+            },
+        );
+
+        expect(screen.getByText('Title')).toBeInTheDocument();
         expect(
             screen.queryByText('There are no items yet.'),
         ).not.toBeInTheDocument();
