@@ -7,6 +7,7 @@ import {
     useCartMetaValue,
     useCartValue,
 } from '@/shared/presentation/contexts';
+import { OrderSchema } from '@/shared/presentation/validation/OrderSchema';
 import {
     OrderTotalDisplay,
     Spacing,
@@ -42,6 +43,7 @@ const Cart: FC = () => {
                     quantity: entry.quantity,
                 })),
             }),
+        validationSchema: OrderSchema,
     });
 
     const selectedCustomer = useMemo(() => {
