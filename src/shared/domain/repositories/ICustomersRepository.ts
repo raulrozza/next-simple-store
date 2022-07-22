@@ -1,7 +1,7 @@
 import { ICustomer } from '@/shared/domain/entities/Customer';
 
 export type ICustomerQueryParams = {
-    name?: string;
+    query?: string;
 };
 
 export interface ICustomersRepository {

@@ -4,7 +4,7 @@ import { ICustomersRepository } from '@/shared/domain/repositories/ICustomersRep
 export default class GetCustomers {
     constructor(private readonly customersRepository: ICustomersRepository) {}
 
-    async execute(params?: { name?: string }): Promise<ICustomer[]> {
+    async execute(params?: { query?: string }): Promise<ICustomer[]> {
         return this.customersRepository.getAll(params);
     }
 }

@@ -39,7 +39,7 @@ describe('CreateProduct', () => {
         );
 
         const result = await getProductsUseCase.execute({
-            name: createdProducts[0].name,
+            query: createdProducts[0].name,
         });
 
         expect(result).toEqual([createdProducts[0]]);
@@ -56,7 +56,7 @@ describe('CreateProduct', () => {
         );
 
         const result = await getProductsUseCase.execute({
-            slug: createdProducts[1].slug,
+            query: createdProducts[1].slug,
         });
 
         expect(result).toEqual([createdProducts[1]]);

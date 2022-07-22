@@ -15,7 +15,7 @@ export class FakeCustomersRepository implements ICustomersRepository {
         return this.customers.filter(customer => {
             let matchesParams = true;
 
-            if (params.name && !customer.name.includes(params.name))
+            if (params.query && !customer.name.includes(params.query))
                 matchesParams = false;
 
             return matchesParams;

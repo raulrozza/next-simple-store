@@ -1,8 +1,7 @@
 import { IProduct } from '@/shared/domain/entities/Product';
 
 export type IProductQueryParams = {
-    slug?: string;
-    name?: string;
+    nameOrSlug?: string;
 };
 
 export interface IProductsRepository {

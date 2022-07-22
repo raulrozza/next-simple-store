@@ -10,9 +10,13 @@ export class FakeProductsRepository {
         return this.products.filter(product => {
             let matchesParams = true;
 
-            if (params.name && !product.name.includes(params.name))
-                matchesParams = false;
-            if (params.slug && product.slug !== params.slug)
+            if (
+                params.nameOrSlug &&
+                !(
+                    product.name.includes(params.nameOrSlug) ||
+                    product.slug.includes(params.nameOrSlug)
+                )
+            )
                 matchesParams = false;
 
             return matchesParams;

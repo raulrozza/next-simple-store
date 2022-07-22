@@ -39,7 +39,7 @@ describe('CreateCustomer', () => {
         );
 
         const result = await getCustomersUseCase.execute({
-            name: createdCustomers[0].name,
+            query: createdCustomers[0].name,
         });
 
         expect(result).toEqual([createdCustomers[0]]);
