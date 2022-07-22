@@ -7,7 +7,10 @@ import {
     useCartMetaValue,
     useCartValue,
 } from '@/shared/presentation/contexts';
-import { Spacing } from '@/shared/presentation/view/components/atoms';
+import {
+    OrderTotalDisplay,
+    Spacing,
+} from '@/shared/presentation/view/components/atoms';
 import { Form } from '@/shared/presentation/view/components/molecules';
 import {
     CartItemsList,
@@ -118,17 +121,13 @@ const Cart: FC = () => {
                                 />
                             </div>
 
-                            <div>
-                                <h3>Order total</h3>
-
-                                <p>
-                                    $
-                                    {calculateDiscountedTotal(
-                                        meta.total,
-                                        formik.values.installments,
-                                    ).toFixed(2)}
-                                </p>
-                            </div>
+                            <OrderTotalDisplay
+                                title="Order total"
+                                totalText={`$${calculateDiscountedTotal(
+                                    meta.total,
+                                    formik.values.installments,
+                                ).toFixed(2)}`}
+                            />
                         </FinishOrderContainer>
                     </FormikProvider>
                 </Content>
