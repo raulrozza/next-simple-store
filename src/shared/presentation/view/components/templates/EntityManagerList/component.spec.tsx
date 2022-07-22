@@ -8,10 +8,12 @@ describe('EntityManagerList', () => {
     it('should render the component correctly, displaying all its elements and the item list', () => {
         const view = render(
             <EntityManagerList
-                addButton={{
-                    href: '/add',
-                    text: 'Add',
-                }}
+                upperButtons={[
+                    {
+                        href: '/add',
+                        text: 'Add',
+                    },
+                ]}
                 emptyText="There are no items yet."
                 items={[
                     {
@@ -44,10 +46,12 @@ describe('EntityManagerList', () => {
     it('should display the empty text when there are no items', () => {
         const view = render(
             <EntityManagerList
-                addButton={{
-                    href: '/add',
-                    text: 'Add',
-                }}
+                upperButtons={[
+                    {
+                        href: '/add',
+                        text: 'Add',
+                    },
+                ]}
                 emptyText="There are no items yet."
                 items={[]}
                 renderItem={() => <div>Item</div>}

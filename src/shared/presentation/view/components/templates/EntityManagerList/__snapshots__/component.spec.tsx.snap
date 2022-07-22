@@ -17,12 +17,11 @@ Object {
   -ms-flex-align: center;
   align-items: center;
   gap: 0.25rem;
-  background-color: #579FB3;
-  color: #FFFFFF;
+  color: #1E4243;
 }
 
 .c3:hover {
-  background-color: #71B7C8;
+  background-color: #CDD5D5;
 }
 
 .c6 {
@@ -60,6 +59,7 @@ Object {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0.25rem;
 }
 
 .c7 {
@@ -81,20 +81,6 @@ Object {
               class="c3"
               href="/add"
             >
-              <svg
-                data-testid="button-Icon"
-                fill="currentColor"
-                height="1em"
-                stroke="currentColor"
-                stroke-width="0"
-                viewBox="0 0 448 512"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"
-                />
-              </svg>
               Add
             </a>
           </div>
@@ -133,12 +119,11 @@ Object {
   -ms-flex-align: center;
   align-items: center;
   gap: 0.25rem;
-  background-color: #579FB3;
-  color: #FFFFFF;
+  color: #1E4243;
 }
 
 .c3:hover {
-  background-color: #71B7C8;
+  background-color: #CDD5D5;
 }
 
 .c6 {
@@ -176,6 +161,7 @@ Object {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0.25rem;
 }
 
 .c7 {
@@ -196,20 +182,6 @@ Object {
             class="c3"
             href="/add"
           >
-            <svg
-              data-testid="button-Icon"
-              fill="currentColor"
-              height="1em"
-              stroke="currentColor"
-              stroke-width="0"
-              viewBox="0 0 448 512"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"
-              />
-            </svg>
             Add
           </a>
         </div>
@@ -304,12 +276,11 @@ Object {
   -ms-flex-align: center;
   align-items: center;
   gap: 0.25rem;
-  background-color: #579FB3;
-  color: #FFFFFF;
+  color: #1E4243;
 }
 
 .c3:hover {
-  background-color: #71B7C8;
+  background-color: #CDD5D5;
 }
 
 .c6 {
@@ -347,6 +318,7 @@ Object {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0.25rem;
 }
 
 .c7 {
@@ -368,20 +340,6 @@ Object {
               class="c3"
               href="/add"
             >
-              <svg
-                data-testid="button-Icon"
-                fill="currentColor"
-                height="1em"
-                stroke="currentColor"
-                stroke-width="0"
-                viewBox="0 0 448 512"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"
-                />
-              </svg>
               Add
             </a>
           </div>
@@ -424,12 +382,11 @@ Object {
   -ms-flex-align: center;
   align-items: center;
   gap: 0.25rem;
-  background-color: #579FB3;
-  color: #FFFFFF;
+  color: #1E4243;
 }
 
 .c3:hover {
-  background-color: #71B7C8;
+  background-color: #CDD5D5;
 }
 
 .c6 {
@@ -467,6 +424,7 @@ Object {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0.25rem;
 }
 
 .c7 {
@@ -487,20 +445,6 @@ Object {
             class="c3"
             href="/add"
           >
-            <svg
-              data-testid="button-Icon"
-              fill="currentColor"
-              height="1em"
-              stroke="currentColor"
-              stroke-width="0"
-              viewBox="0 0 448 512"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"
-              />
-            </svg>
             Add
           </a>
         </div>

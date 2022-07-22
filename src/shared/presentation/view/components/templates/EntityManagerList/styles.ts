@@ -18,6 +18,7 @@ export const Content = styled.main`
 
 export const ButtonPanel = styled.div`
     display: flex;
+    gap: ${({ theme }) => theme.layout.spacing(1)};
 `;
 
 export const List = styled(Card)`

@@ -1,15 +1,23 @@
 import { FC } from 'react';
 
-import { useRouter } from 'next/router';
-
 import { Menu } from '@/shared/presentation/view/components/organisms';
+import { EntityManagerList } from '@/shared/presentation/view/components/templates';
+
+import { useOrdersController } from './hooks';
 
 const Orders: FC = () => {
-    const { pathname } = useRouter();
+    const { orders } = useOrdersController();
 
     return (
         <section>
-            <Menu activeItem={pathname} />
+            <Menu activeItem="/orders" />
+
+            <EntityManagerList
+                title="Orders"
+                items={orders}
+                emptyText="There are no orders yet."
+                renderItem={({ item }) => <div>{item.customer.name}</div>}
+            />
         </section>
     );
 };

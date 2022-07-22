@@ -1,4 +1,9 @@
-import { FC, PropsWithChildren, ReactElement } from 'react';
+import {
+    ComponentPropsWithoutRef,
+    FC,
+    PropsWithChildren,
+    ReactElement,
+} from 'react';
 
 import Link from 'next/link';
 
@@ -6,11 +11,15 @@ import { Button, Spacing } from '@/shared/presentation/view/components/atoms';
 
 import { ButtonPanel, Container, Content, List } from './styles';
 
+type ButtonProps = ComponentPropsWithoutRef<typeof Button>;
+
 interface EntityManagerListProps<T> {
-    addButton: {
+    upperButtons?: Array<{
         href: string;
         text: string;
-    };
+        icon?: ButtonProps['icon'];
+        variant?: ButtonProps['variant'];
+    }>;
     title: string;
     emptyText: string;
     items: T[];
@@ -18,7 +27,7 @@ interface EntityManagerListProps<T> {
 }
 
 function EntityManagerList<T extends { id: string }>({
-    addButton,
+    upperButtons = [],
     title,
     items,
     emptyText,
@@ -28,11 +37,17 @@ function EntityManagerList<T extends { id: string }>({
         <Container>
             <Content>
                 <ButtonPanel>
-                    <Link href={addButton.href} passHref>
-                        <Button icon="plus" variant="primary" asAnchor>
-                            {addButton.text}
-                        </Button>
-                    </Link>
+                    {upperButtons.map(button => (
+                        <Link key={button.href} href={button.href} passHref>
+                            <Button
+                                icon={button.icon}
+                                variant={button.variant}
+                                asAnchor
+                            >
+                                {button.text}
+                            </Button>
+                        </Link>
+                    ))}
                 </ButtonPanel>
 
                 <Spacing size={2} />

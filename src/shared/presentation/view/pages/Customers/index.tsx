@@ -14,10 +14,14 @@ const Customers: FC = () => {
             <Menu activeItem="/customers" />
 
             <EntityManagerList
-                addButton={{
-                    href: '/customers/new',
-                    text: 'Add Customer',
-                }}
+                upperButtons={[
+                    {
+                        href: '/customers/new',
+                        text: 'Add Customer',
+                        icon: 'plus',
+                        variant: 'primary',
+                    },
+                ]}
                 title="Customers"
                 items={customers}
                 emptyText="There are no customers yet."
