@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 
 import { ICustomer } from '@/shared/domain/entities/Customer';
 import makeGetCustomers from '@/shared/domain/useCases/factories/makeGetCustomers';
@@ -8,11 +8,17 @@ export default function useCustomersController() {
 
     const getUseCase = useMemo(() => makeGetCustomers(), []);
 
-    useEffect(() => {
-        getUseCase.execute().then(customers => {
+    const getCustomers = useCallback(
+        async (params: { query?: string } = {}) => {
+            const customers = await getUseCase.execute(params);
             setCustomers(customers);
-        });
-    }, [getUseCase]);
+        },
+        [getUseCase],
+    );
 
-    return { customers };
+    useEffect(() => {
+        getCustomers();
+    }, [getCustomers]);
+
+    return { customers, getCustomers };
 }

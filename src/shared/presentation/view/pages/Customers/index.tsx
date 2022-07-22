@@ -7,7 +7,7 @@ import { EntityManagerList } from '@/shared/presentation/view/components/templat
 import { useCustomersController } from './hooks';
 
 const Customers: FC = () => {
-    const { customers } = useCustomersController();
+    const { customers, getCustomers } = useCustomersController();
 
     return (
         <section>
@@ -22,6 +22,10 @@ const Customers: FC = () => {
                         variant: 'primary',
                     },
                 ]}
+                search={{
+                    onSearch: text => getCustomers({ query: text }),
+                    placeholder: 'Search by name',
+                }}
                 title="Customers"
                 items={customers}
                 emptyText="There are no customers yet."
