@@ -1,0 +1,539 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CartItemsList should display only the empty text if there are no items 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <p>
+        Empty text
+      </p>
+    </div>
+  </body>,
+  "container": <div>
+    <p>
+      Empty text
+    </p>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`CartItemsList should render the component correctly, displaying all sub components 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": .c4 {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.25rem;
+  background-color: #579FB3;
+  color: #FFFFFF;
+}
+
+.c4:hover {
+  background-color: #71B7C8;
+}
+
+.c1 {
+  background-color: #FFFFFF;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  display: grid;
+  grid-template-areas: 'name price button' 'quantity price button';
+  grid-template-columns: 4fr 1fr 3rem;
+  gap: 0.25rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 .name {
+  grid-area: name;
+}
+
+.c1 .quantity {
+  grid-area: quantity;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 0.7rem;
+}
+
+.c1 .quantity input {
+  outline: none;
+  font-size: 0.7rem;
+  max-width: 4rem;
+}
+
+.c1 .price {
+  grid-area: price;
+  color: #244f5c;
+  justify-self: end;
+}
+
+.c1 button {
+  grid-area: button;
+  justify-self: end;
+}
+
+.c3 {
+  margin-top: 0.5rem;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  color: #FFFFFF;
+}
+
+.c2 div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.c0 {
+  background-color: #845864;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+@media (min-width:768px) {
+  .c1 {
+    grid-template-areas: 'name quantity price button';
+    grid-template-columns: 4fr 1fr 1fr 3rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c2 div {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+<body>
+    <div>
+      <ul
+        class="c0"
+      >
+        <li
+          class="c1"
+        >
+          <p
+            class="name"
+          >
+            Product name
+          </p>
+          <div
+            class="quantity"
+          >
+            <label>
+              Quantity
+            </label>
+            <input
+              data-testid="cartListItem-input"
+              type="number"
+              value="2"
+            />
+          </div>
+          <p
+            class="price"
+          >
+            $
+            90.00
+          </p>
+          <button>
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 448 512"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16zM53.2 467a48 48 0 0 0 47.9 45h245.8a48 48 0 0 0 47.9-45L416 128H32z"
+              />
+            </svg>
+          </button>
+        </li>
+        <footer
+          class="c2"
+        >
+          <div>
+            <p>
+              first label
+            </p>
+            <p>
+              second label
+            </p>
+          </div>
+          <div
+            class="c3"
+            size="2"
+          />
+          <button
+            class="c4"
+          >
+            Button
+          </button>
+        </footer>
+      </ul>
+    </div>
+  </body>,
+  "container": .c4 {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.25rem;
+  background-color: #579FB3;
+  color: #FFFFFF;
+}
+
+.c4:hover {
+  background-color: #71B7C8;
+}
+
+.c1 {
+  background-color: #FFFFFF;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  display: grid;
+  grid-template-areas: 'name price button' 'quantity price button';
+  grid-template-columns: 4fr 1fr 3rem;
+  gap: 0.25rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 .name {
+  grid-area: name;
+}
+
+.c1 .quantity {
+  grid-area: quantity;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 0.7rem;
+}
+
+.c1 .quantity input {
+  outline: none;
+  font-size: 0.7rem;
+  max-width: 4rem;
+}
+
+.c1 .price {
+  grid-area: price;
+  color: #244f5c;
+  justify-self: end;
+}
+
+.c1 button {
+  grid-area: button;
+  justify-self: end;
+}
+
+.c3 {
+  margin-top: 0.5rem;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  color: #FFFFFF;
+}
+
+.c2 div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.c0 {
+  background-color: #845864;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+@media (min-width:768px) {
+  .c1 {
+    grid-template-areas: 'name quantity price button';
+    grid-template-columns: 4fr 1fr 1fr 3rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c2 div {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+<div>
+    <ul
+      class="c0"
+    >
+      <li
+        class="c1"
+      >
+        <p
+          class="name"
+        >
+          Product name
+        </p>
+        <div
+          class="quantity"
+        >
+          <label>
+            Quantity
+          </label>
+          <input
+            data-testid="cartListItem-input"
+            type="number"
+            value="2"
+          />
+        </div>
+        <p
+          class="price"
+        >
+          $
+          90.00
+        </p>
+        <button>
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 448 512"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16zM53.2 467a48 48 0 0 0 47.9 45h245.8a48 48 0 0 0 47.9-45L416 128H32z"
+            />
+          </svg>
+        </button>
+      </li>
+      <footer
+        class="c2"
+      >
+        <div>
+          <p>
+            first label
+          </p>
+          <p>
+            second label
+          </p>
+        </div>
+        <div
+          class="c3"
+          size="2"
+        />
+        <button
+          class="c4"
+        >
+          Button
+        </button>
+      </footer>
+    </ul>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

@@ -7,18 +7,15 @@ import {
     useCartMetaValue,
     useCartValue,
 } from '@/shared/presentation/contexts';
+import { Spacing } from '@/shared/presentation/view/components/atoms';
+import { Form } from '@/shared/presentation/view/components/molecules';
 import {
-    CartListItem,
-    Spacing,
-} from '@/shared/presentation/view/components/atoms';
-import {
-    CartFooter,
-    Form,
-} from '@/shared/presentation/view/components/molecules';
-import { Menu } from '@/shared/presentation/view/components/organisms';
+    CartItemsList,
+    Menu,
+} from '@/shared/presentation/view/components/organisms';
 
 import { useCartController } from './hooks';
-import { Container, Content, FinishOrderContainer, List } from './styles';
+import { Container, Content, FinishOrderContainer } from './styles';
 
 const DISCOUNT = 0.1;
 
@@ -69,30 +66,21 @@ const Cart: FC = () => {
 
                     <Spacing size={3} />
 
-                    {cart.length ? (
-                        <List>
-                            {cart.map(entry => (
-                                <CartListItem
-                                    key={entry.product.id}
-                                    {...entry}
-                                />
-                            ))}
-
-                            <CartFooter
-                                bottomLabels={[
-                                    ` You have ${meta.quantity} products in
-                                    your cart.`,
-                                    `Total: $${meta.total.toFixed(2)}`,
-                                ]}
-                                button={{
-                                    text: 'Remove all items',
-                                    onClick: clear,
-                                }}
-                            />
-                        </List>
-                    ) : (
-                        <p>No items added yet.</p>
-                    )}
+                    <CartItemsList
+                        items={cart}
+                        footer={{
+                            bottomLabels: [
+                                ` You have ${meta.quantity} products in
+                            your cart.`,
+                                `Total: $${meta.total.toFixed(2)}`,
+                            ],
+                            button: {
+                                text: 'Remove all items',
+                                onClick: clear,
+                            },
+                        }}
+                        emptyText="No items added yet."
+                    />
 
                     <Spacing size={3} />
 

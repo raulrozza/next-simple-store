@@ -10,6 +10,7 @@ import { Item } from './styles';
 interface CartListItemProps {
     product: IProduct;
     quantity: number;
+    children?: never;
 }
 
 const isQuantityValid = (quantity: number) => {
