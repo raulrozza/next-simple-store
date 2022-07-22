@@ -14,7 +14,7 @@ export const ProductCreationSchema = z.object({
     slug: z.string(),
 });
 
-export const ProductEditionCreationSchema = z.object({
+export const ProductEditionSchema = z.object({
     ...commonShape,
     id: z.string(),
 });

@@ -7,7 +7,7 @@ import makeGetSingleProduct from '@/shared/domain/useCases/factories/makeGetSing
 import makeUpdateProduct from '@/shared/domain/useCases/factories/makeUpdateProduct';
 import {
     ProductCreationSchema,
-    ProductEditionCreationSchema,
+    ProductEditionSchema,
 } from '@/shared/infra/validation/ProductSchema';
 
 export const productRoutes = trpc
@@ -41,7 +41,7 @@ export const productRoutes = trpc
         },
     })
     .mutation('update', {
-        input: ProductEditionCreationSchema,
+        input: ProductEditionSchema,
         resolve({ input }) {
             const updateUseCase = makeUpdateProduct();
 

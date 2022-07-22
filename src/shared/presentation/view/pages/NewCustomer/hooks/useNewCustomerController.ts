@@ -1,9 +1,9 @@
-import { useCallback, useMemo } from 'react';
+import { useRef } from 'react';
 
 import { useRouter } from 'next/router';
 
-import makeCreateCustomer from '@/shared/domain/useCases/factories/makeCreateCustomer';
 import { useToastProvider } from '@/shared/presentation/contexts';
+import { useMutation } from '@/shared/presentation/hooks';
 
 type FormParams = {
     name: string;
@@ -13,28 +13,27 @@ type FormParams = {
 };
 
 export default function useNewCustomerController() {
-    const createUseCase = useMemo(() => makeCreateCustomer(), []);
-
     const router = useRouter();
     const toast = useToastProvider();
 
-    const createCustomer = useCallback(
-        async (params: FormParams) => {
-            try {
-                await createUseCase.execute({
-                    name: params.name,
-                    address: params.address,
-                    creditLimit: Number(params.creditLimit),
-                    installmentLimit: Number(params.installmentLimit),
-                });
+    const previousError = useRef<string | null>(null);
+    const { mutate } = useMutation(['customers.create'], {
+        onSuccess: () => router.back(),
+        onError: error => {
+            if (error.message === previousError.current) return;
 
-                router.back();
-            } catch (error: any) {
-                toast.error(error.message);
-            }
+            toast.error(error.message);
+            previousError.current = error.message;
         },
-        [createUseCase, router, toast],
-    );
+    });
 
-    return { createCustomer };
+    return {
+        createCustomer: (params: FormParams) =>
+            mutate({
+                name: params.name,
+                address: params.address,
+                creditLimit: Number(params.creditLimit),
+                installmentLimit: Number(params.installmentLimit),
+            }),
+    };
 }

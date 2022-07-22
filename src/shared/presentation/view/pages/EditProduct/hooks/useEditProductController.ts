@@ -1,4 +1,4 @@
-import { useCallback, useRef } from 'react';
+import { useRef } from 'react';
 
 import { useRouter } from 'next/router';
 
@@ -38,8 +38,9 @@ export default function useEditProductController() {
         },
     });
 
-    const updateProduct = useCallback(
-        async (params: FormParams) => {
+    return {
+        product,
+        updateProduct: (params: FormParams) => {
             mutate({
                 id: String(router.query.id),
                 name: params.name,
@@ -48,8 +49,5 @@ export default function useEditProductController() {
                 slug: params.slug,
             });
         },
-        [mutate, router.query.id],
-    );
-
-    return { product, updateProduct };
+    };
 }
