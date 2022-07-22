@@ -1,5 +1,6 @@
 import { FC } from 'react';
 
+import { OrderInfoItem } from '@/shared/presentation/view/components/atoms';
 import { Menu } from '@/shared/presentation/view/components/organisms';
 import { EntityManagerList } from '@/shared/presentation/view/components/templates';
 
@@ -16,7 +17,9 @@ const Orders: FC = () => {
                 title="Orders"
                 items={orders}
                 emptyText="There are no orders yet."
-                renderItem={({ item }) => <div>{item.customer.name}</div>}
+                renderItem={({ item }) => (
+                    <OrderInfoItem key={item.id} order={item} />
+                )}
             />
         </section>
     );

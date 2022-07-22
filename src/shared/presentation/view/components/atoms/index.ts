@@ -6,6 +6,7 @@ export { default as Drawer } from './Drawer';
 export { default as FieldFactory } from './FieldFactory';
 export { default as Input } from './Input';
 export { default as NavLink } from './NavLink';
+export { default as OrderInfoItem } from './OrderInfoItem';
 export { default as OrderTotalDisplay } from './OrderTotalDisplay';
 export { default as Select } from './Select';
 export { default as Spacing } from './Spacing';
