@@ -1,6 +1,8 @@
+import { withTRPC } from '@trpc/next';
 import { memoize } from 'lodash';
 import type { AppProps } from 'next/app';
 
+import type { AppRouter } from '@/shared/infra/routes';
 import AppContainer from '@/shared/presentation/view/AppContainer';
 
 // ignore in-browser next/js recoil warnings until its fixed.
@@ -18,4 +20,16 @@ function MyApp({ Component, pageProps }: AppProps) {
         </AppContainer>
     );
 }
-export default MyApp;
+
+export default withTRPC<AppRouter>({
+    config({ ctx }) {
+        const url = process.env.VERCEL_URL
+            ? `https://${process.env.VERCEL_URL}/api/trpc`
+            : 'http://localhost:3000/api/trpc';
+
+        return {
+            url,
+        };
+    },
+    ssr: true,
+})(MyApp);

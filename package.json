@@ -12,6 +12,10 @@
     },
     "dependencies": {
         "@radix-ui/react-hover-card": "^0.1.5",
+        "@trpc/client": "^9.26.2",
+        "@trpc/next": "^9.26.2",
+        "@trpc/react": "^9.26.2",
+        "@trpc/server": "^9.26.2",
         "formik": "^2.2.9",
         "intercept-stdout": "^0.1.2",
         "lodash": "^4.17.21",
@@ -20,6 +24,7 @@
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "react-icons": "^4.4.0",
+        "react-query": "3",
         "react-toastify": "^9.0.7",
         "recoil": "^0.7.4",
         "styled-components": "^5.3.5",
