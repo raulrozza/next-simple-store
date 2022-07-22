@@ -26,13 +26,22 @@ const Cart: FC = () => {
     const cart = useCartValue();
     const meta = useCartMetaValue();
     const { clear } = useCartManager();
-    const { customers } = useCartController();
+    const { createOrder, customers } = useCartController();
+
     const formik = useFormik({
         initialValues: {
             customer: '',
             installments: 1,
         },
-        onSubmit: console.log,
+        onSubmit: ({ customer, installments }) =>
+            createOrder({
+                customerId: customer,
+                installments,
+                products: cart.map(entry => ({
+                    productId: entry.product.id,
+                    quantity: entry.quantity,
+                })),
+            }),
     });
 
     const selectedCustomer = useMemo(() => {
@@ -98,6 +107,8 @@ const Cart: FC = () => {
                     <Spacing size={3} />
 
                     <h2>Finish order</h2>
+
+                    <Spacing size={3} />
 
                     <FormikProvider value={formik}>
                         <FinishOrderContainer>

@@ -20,13 +20,19 @@ export const FinishOrderContainer = styled.div`
         display: flex;
         background-color: ${theme.palette.gray['0']};
         border-radius: ${theme.layout.borderRadius.md};
-        padding: ${theme.layout.spacing(2)};
+        padding: ${theme.layout.spacing(8, 2)};
+        gap: ${theme.layout.spacing(4)};
+        flex-direction: column;
 
         div {
             display: flex;
             flex: 1;
             flex-direction: column;
             align-items: center;
+        }
+
+        @media (min-width: ${theme.layout.breakpoints.md}) {
+            flex-direction: row;
         }
     `}
 `;
