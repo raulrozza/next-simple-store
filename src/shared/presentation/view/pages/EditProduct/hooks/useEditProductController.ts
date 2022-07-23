@@ -30,12 +30,7 @@ export default function useEditProductController() {
     );
     const { mutate } = useMutation(['products.update'], {
         onSuccess: () => router.back(),
-        onError: error => {
-            if (error.message === previousError.current) return;
-
-            toast.error(error.message);
-            previousError.current = error.message;
-        },
+        onError: error => toast.error(error.message),
     });
 
     return {

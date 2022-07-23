@@ -37,7 +37,7 @@ const Cart: FC = () => {
         onSubmit: ({ customer, installments }) =>
             createOrder({
                 customerId: customer,
-                installments,
+                installments: Number(installments),
                 products: cart.map(entry => ({
                     productId: entry.product.id,
                     quantity: entry.quantity,

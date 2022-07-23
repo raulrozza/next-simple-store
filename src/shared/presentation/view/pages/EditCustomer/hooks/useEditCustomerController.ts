@@ -33,12 +33,7 @@ export default function useEditCustomerController() {
     );
     const { mutate } = useMutation(['customers.update'], {
         onSuccess: () => router.back(),
-        onError: error => {
-            if (error.message === previousError.current) return;
-
-            toast.error(error.message);
-            previousError.current = error.message;
-        },
+        onError: error => toast.error(error.message),
     });
 
     return {
