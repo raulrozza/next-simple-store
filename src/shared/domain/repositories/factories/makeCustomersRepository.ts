@@ -1,11 +1,11 @@
-import { FakeCustomersRepository } from '@/shared/domain/repositories/fakes/FakeCustomersRepository';
 import { ICustomersRepository } from '@/shared/domain/repositories/ICustomersRepository';
+import { PrismaCustomersRepository } from '@/shared/infra/database/repositories/PrismaCustomersRepository';
 
 let instance: ICustomersRepository | null = null;
 
 export default function makeCustomersRepository(): ICustomersRepository {
     if (!instance) {
-        instance = new FakeCustomersRepository();
+        instance = new PrismaCustomersRepository();
     }
 
     return instance;
