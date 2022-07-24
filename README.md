@@ -37,6 +37,8 @@ The presentation layer contains our React components and structure. These are th
 
 If you want to run this app locally, just take the following steps.
 
-Use `npm install` or `yarn` to install the dependencies. I prefer using yarn, so we'll go with that. The post-install script should handle the database setup and migrations, but if it doesn't, run `yarn prisma generate` and `yarn prisma migrate dev` to set the database up.
+First, setup your `.env` file, following the template. Provide the connection url for your postgres database (which can be running locally, or from a remote provider). You also need to provide the shadow database, which is used on the dev environment. **If for some reason** you don't want all that trouble, you can switch the provider on `./prisma/schema.prisma` to **sqlite** and pass de url as `"file:./database.db"` to use the local database.
+
+Then, use `npm install` or `yarn` to install the dependencies. I prefer using yarn, so we'll go with that. The post-install script should handle the database setup and migrations, but if it doesn't, run `yarn prisma generate` and `yarn prisma migrate dev` to set the database up.
 
 Run the app with `yarn dev`. That's pretty much it.
