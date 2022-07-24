@@ -2,6 +2,8 @@
 
 This is a simple store app where the user can register customers, products and then order some of those products. The main goal of the app is to test NextJS as a backend using tRPC and Prisma.
 
+You can check on the demo app [by clicking here](https://next-simple-store.vercel.app/).
+
 ## Tools
 
 The main tools used for this project are:
