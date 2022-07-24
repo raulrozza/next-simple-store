@@ -20,3 +20,5 @@ Supporting tools:
 - [Styled Components](https://styled-components.com/): One of the nicest CSS-in-JS solutions for styling your app.
 - [Yup](https://github.com/jquense/yup): Nice schema validator that integrates smoothly with formik. Has an easy way to declare validation error messages, so it's used for the form validations.
 - [Zod](https://github.com/colinhacks/zod): A typesafe schema validation, pretty much like Yup, but with better type inference. Used with tRPC to infer and validate the route inputs.
+
+Other tools worth mentioning are [Lodash](https://lodash.com/), [Polished](https://polished.js.org/), [Radix UI](https://www.radix-ui.com/), [React Icons](https://react-icons.github.io/react-icons/) and [React Toastify](https://fkhadra.github.io/react-toastify/introduction).
