@@ -6,10 +6,10 @@ export const Container = styled.div`
 
         display: grid;
         grid-template-areas: 'title price' 'list list';
-        grid-template-columns: 1fr ${theme.layout.size(5)};
+        grid-template-columns: 1fr ${theme.layout.size(9)};
         gap: ${theme.layout.spacing(2)};
 
-        h2 {
+        > strong {
             grid-area: title;
             color: ${theme.palette.primary['1000']};
         }
@@ -17,6 +17,7 @@ export const Container = styled.div`
         > span {
             grid-area: price;
             align-self: center;
+            justify-self: flex-end;
         }
 
         ul {

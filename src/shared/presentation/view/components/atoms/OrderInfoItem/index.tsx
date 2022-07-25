@@ -11,12 +11,12 @@ interface OrderInfoItemProps {
 
 const OrderInfoItem: FC<OrderInfoItemProps> = ({ order }) => (
     <Container>
-        <h2>{order.customer.name}</h2>
+        <strong>{order.customer.name}</strong>
 
         <span>Total: ${order.discountedPrice.toFixed(2)}</span>
 
         <List>
-            <h3>Products ({order.products.length})</h3>
+            <strong>Products ({order.products.length})</strong>
 
             <Spacing size={2} />
 

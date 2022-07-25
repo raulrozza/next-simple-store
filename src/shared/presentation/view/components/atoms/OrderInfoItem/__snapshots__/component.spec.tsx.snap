@@ -11,11 +11,11 @@ Object {
   padding: 0.75rem;
   display: grid;
   grid-template-areas: 'title price' 'list list';
-  grid-template-columns: 1fr 5rem;
+  grid-template-columns: 1fr 9rem;
   gap: 0.5rem;
 }
 
-.c0 h2 {
+.c0 > strong {
   grid-area: title;
   color: #244f5c;
 }
@@ -25,6 +25,7 @@ Object {
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
+  justify-self: flex-end;
 }
 
 .c0 ul {
@@ -56,9 +57,9 @@ Object {
       <div
         class="c0"
       >
-        <h2>
+        <strong>
           John Doe
-        </h2>
+        </strong>
         <span>
           Total: $
           20.00
@@ -66,11 +67,11 @@ Object {
         <ul
           class="c1"
         >
-          <h3>
+          <strong>
             Products (
             1
             )
-          </h3>
+          </strong>
           <div
             class="c2"
             size="2"
@@ -99,11 +100,11 @@ Object {
   padding: 0.75rem;
   display: grid;
   grid-template-areas: 'title price' 'list list';
-  grid-template-columns: 1fr 5rem;
+  grid-template-columns: 1fr 9rem;
   gap: 0.5rem;
 }
 
-.c0 h2 {
+.c0 > strong {
   grid-area: title;
   color: #244f5c;
 }
@@ -113,6 +114,7 @@ Object {
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
+  justify-self: flex-end;
 }
 
 .c0 ul {
@@ -143,9 +145,9 @@ Object {
     <div
       class="c0"
     >
-      <h2>
+      <strong>
         John Doe
-      </h2>
+      </strong>
       <span>
         Total: $
         20.00
@@ -153,11 +155,11 @@ Object {
       <ul
         class="c1"
       >
-        <h3>
+        <strong>
           Products (
           1
           )
-        </h3>
+        </strong>
         <div
           class="c2"
           size="2"
